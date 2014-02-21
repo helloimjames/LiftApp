@@ -1,5 +1,5 @@
 package com.example.liftapp;
-
+//This is a test
 import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.ActionBarActivity;
