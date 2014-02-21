@@ -1,0 +1,28 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.liftapp.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Workouts"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal|top"
+        android:textAlignment="center"
+        android:singleLine="true" />
+
+    <ListView
+        android:layout_width="213dp"
+        android:layout_height="357dp"
+        android:id="@+id/listViewWorkouts"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:scrollingCache="false"
+        android:smoothScrollbar="true" />
+
+</FrameLayout>

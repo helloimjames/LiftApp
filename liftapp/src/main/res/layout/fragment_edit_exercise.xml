@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.liftapp.EditExercise$PlaceholderFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="EXERCISE"
+        android:id="@+id/txtNameOfExercise"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="----------------------------------------"
+        android:id="@+id/textView"
+        android:layout_below="@+id/txtNameOfExercise"
+        android:layout_centerHorizontal="true" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/npSetsForExercise"
+        android:layout_marginTop="71dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/npRepsForExercise"
+        android:layout_alignTop="@+id/npSetsForExercise"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SETS"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/npRepsForExercise"
+        android:layout_alignLeft="@+id/npSetsForExercise"
+        android:layout_alignStart="@+id/npSetsForExercise" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="REPS"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/npRepsForExercise"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/btnUpdateExercise"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/npSetsForExercise"
+        android:layout_alignStart="@+id/npSetsForExercise"
+        android:layout_marginBottom="60dp"
+        android:layout_alignRight="@+id/npRepsForExercise"
+        android:layout_alignEnd="@+id/npRepsForExercise" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Exercise"
+        android:id="@+id/btnStartExercise"
+        android:layout_above="@+id/btnUpdateExercise"
+        android:layout_marginBottom="40dp"
+        android:layout_alignLeft="@+id/btnUpdateExercise"
+        android:layout_alignStart="@+id/btnUpdateExercise"
+        android:layout_alignRight="@+id/btnUpdateExercise"
+        android:layout_alignEnd="@+id/btnUpdateExercise" />
+</RelativeLayout>
