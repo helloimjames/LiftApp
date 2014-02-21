@@ -13,9 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.NumberPicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +42,6 @@ public class MainActivity extends ActionBarActivity {
     }
     private void populateWorkoutList() {
         myWorkouts.add(new Workouts("+",0));
-        //myWorkouts.add(new Workouts("+",0,0,0));
         Cursor cursor = myDb.getAllRows();
         displayRecordSet(cursor);
 
@@ -52,19 +49,13 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void displayRecordSet(Cursor cursor) {
-        String message = "";
-        // populate the message from the cursor
-
         // Reset cursor to start, checking to see if there's data:
         if (cursor.moveToFirst()) {
             do {
                 // Process the data:
-                int id = cursor.getInt(DBAdapter.COL_ROWID);
-                String name = cursor.getString(DBAdapter.COL_NAME);
-                //useful for showing all row count
+                int id = cursor.getInt(DBAdapter.COL_ROWID_WORKOUT);
+                String name = cursor.getString(DBAdapter.COL_NAME_WORKOUT);
                 int RowNumber = cursor.getCount();
-
-                // Append data to the message:
                 myWorkouts.add(new Workouts(name,id));
             } while(cursor.moveToNext());
         }
@@ -72,7 +63,6 @@ public class MainActivity extends ActionBarActivity {
         // Close the cursor to avoid a resource leak.
         cursor.close();
 
-        //displayText(message);
 
     }
 
@@ -99,7 +89,7 @@ public class MainActivity extends ActionBarActivity {
                 }
                 else{
                     Cursor cursorOfWorkout = myDb.getRow(clickedCar.getID());
-                    rowIDLong = cursorOfWorkout.getLong(DBAdapter.COL_ROWID);
+                    rowIDLong = cursorOfWorkout.getLong(DBAdapter.COL_ROWID_WORKOUT);
                     startActivity(new Intent(MainActivity.this, Exercises.class));
                 }
             }
@@ -131,8 +121,8 @@ public class MainActivity extends ActionBarActivity {
                 else{
                // Workouts clickedCar = myWorkouts.get(pos);
                 Cursor cursorOfWorkout = myDb.getRow(clickedCar.getID());
-                workoutToEdit = cursorOfWorkout.getString(DBAdapter.COL_NAME);
-                rowIDLong = cursorOfWorkout.getLong(DBAdapter.COL_ROWID);
+                workoutToEdit = cursorOfWorkout.getString(DBAdapter.COL_NAME_WORKOUT);
+                rowIDLong = cursorOfWorkout.getLong(DBAdapter.COL_ROWID_WORKOUT);
                 startActivity(new Intent(MainActivity.this, EditWorkout.class));
                 }
 

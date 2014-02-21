@@ -1,17 +1,9 @@
 package com.example.liftapp;
 
 import android.app.Activity;
-import android.app.ActionBar;
-import android.app.Fragment;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -68,7 +60,7 @@ public class EditWorkout extends Activity {
     private void deleteAssociatedExercises(Cursor cursor) {
         String message = "";
         // populate the message from the cursor
-        //int LongRow = cursor.getInt(DBAdapter.COL_FAVCOLOUR2);
+        //int LongRow = cursor.getInt(DBAdapter.COL_OF_PARENT_WORKOUT_ID);
         String LongRowID = Long.toString(fromMainActivity.rowIDLong());
         int IntRowID = Integer.parseInt(LongRowID);
         // Reset cursor to start, checking to see if there's data:
@@ -76,12 +68,12 @@ public class EditWorkout extends Activity {
 
             do {
                 // Process the data:
-                int id = cursor.getInt(DBAdapter.COL_ROWID2);
-                String name = cursor.getString(DBAdapter.COL_NAME2);
-                int studentNumber = cursor.getInt(DBAdapter.COL_STUDENTNUM2);
-                int favColour = cursor.getInt(DBAdapter.COL_FAVCOLOUR1);
+                int id = cursor.getInt(DBAdapter.COL_ROWID_EXERCISE);
+                String name = cursor.getString(DBAdapter.COL_NAME_EXERCISE);
+                int studentNumber = cursor.getInt(DBAdapter.COL_EXERCISE_SETS);
+                int favColour = cursor.getInt(DBAdapter.COL_EXERCISE_REPS);
                 int RowNumber = cursor.getCount();
-                int LongRow = cursor.getInt(DBAdapter.COL_FAVCOLOUR2);
+                int LongRow = cursor.getInt(DBAdapter.COL_OF_PARENT_WORKOUT_ID);
                 // Append data to the message:
                 message += " name =" + name
 
@@ -133,12 +125,12 @@ public class EditWorkout extends Activity {
         if (cursor.moveToFirst()) {
             do {
                 // Process the data:
-                int id = cursor.getInt(DBAdapter.COL_ROWID2);
-                String name = cursor.getString(DBAdapter.COL_NAME2);
-                int studentNumber = cursor.getInt(DBAdapter.COL_STUDENTNUM2);
-                int favColour = cursor.getInt(DBAdapter.COL_FAVCOLOUR1);
+                int id = cursor.getInt(DBAdapter.COL_ROWID_EXERCISE);
+                String name = cursor.getString(DBAdapter.COL_NAME_EXERCISE);
+                int studentNumber = cursor.getInt(DBAdapter.COL_EXERCISE_SETS);
+                int favColour = cursor.getInt(DBAdapter.COL_EXERCISE_REPS);
                 int RowNumber = cursor.getCount();
-                int LongRow = cursor.getInt(DBAdapter.COL_FAVCOLOUR2);
+                int LongRow = cursor.getInt(DBAdapter.COL_OF_PARENT_WORKOUT_ID);
                 // Append data to the message:
                 if(LongRow == IntRowID){
                 message += "id=" + id

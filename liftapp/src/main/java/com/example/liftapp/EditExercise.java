@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,6 +16,7 @@ import android.os.Build;
 import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class EditExercise extends Activity {
 
@@ -80,6 +82,15 @@ public class EditExercise extends Activity {
         });
 
 
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            startActivity(new Intent(EditExercise.this, Exercises.class));
+            //Toast.makeText(Exercises.this, "Worked", Toast.LENGTH_LONG).show();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
 }

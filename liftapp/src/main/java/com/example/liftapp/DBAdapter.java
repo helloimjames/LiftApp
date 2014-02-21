@@ -32,49 +32,52 @@ public class DBAdapter {
 
 
     // DB Fields
-    public static final String KEY_ROWID = "_id";
-    public static final int COL_ROWID = 0;
-    /*
-     * CHANGE 1:
-     */
-    //
-    public static final String KEY_NAME = "name";
-    public static final String KEY_STUDENTNUM = "studentnum";
-    public static final String KEY_FAVCOLOUR = "favcolour";
+    public static final String KEY_ROWID_WORKOUT = "_id";
+    public static final int COL_ROWID_WORKOUT = 0;
+    public static final String KEY_NAME_WORKOUT = "name";
+    public static final int COL_NAME_WORKOUT = 1;
 
 
 
-    public static final String KEY_ROWID2 = "_id";
-    public static final String KEY_NAME2 = "name";
-    public static final String KEY_STUDENTNUM2 = "studentnum";
-    public static final String KEY_FAVCOLOUR1 = "favcolour";
-    public static final String KEY_FAVCOLOUR2 = "favcolour2";
+    public static final String KEY_ROWID_EXERCISE = "_id";
+    public static final int COL_ROWID_EXERCISE = 0;
+    public static final String KEY_NAME_EXERCISE = "name_exercise";
+    public static final int COL_NAME_EXERCISE = 1;
+    public static final String KEY_EXERCISE_SETS = "exercise_sets";
+    public static final int COL_EXERCISE_SETS = 2;
+    public static final String KEY_EXERCISE_REPS = "exercise_reps";
+    public static final int COL_EXERCISE_REPS = 3;
+    public static final String KEY_OF_PARENT_WORKOUT_ID = "PARENT_WORKOUT_ID";
+    public static final int COL_OF_PARENT_WORKOUT_ID = 4;
 
-    // Setup your field numbers here (0 = KEY_ROWID, 1=...)
-    public static final int COL_NAME = 1;
-    public static final int COL_STUDENTNUM = 2;
-    public static final int COL_FAVCOLOUR = 3;
 
-    public static final int COL_ROWID2 = 0;
-    public static final int COL_NAME2 = 1;
-    public static final int COL_STUDENTNUM2 = 2;
-    public static final int COL_FAVCOLOUR1 = 3;
-    public static final int COL_FAVCOLOUR2 = 4;
 
-    public static final String KEY_ROWID3 = "_id";
-    public static final String KEY_NAME3 = "name";
+
+
+
+    // Setup your field numbers here (0 = KEY_ROWID_WORKOUT, 1=...)
+
+
+    public static final String KEY_ROWID_HISTORY = "_id";
+    //public static final String KEY_NAME_HISTORY = "name";
     public static final String KEY_HISTORY_SETS= "sets";
     public static final String KEY_HISTORY_REPS= "reps";
-    public static final String KEY_HISTORY_EXERCISE_ID= "id";
-    public static final int COL_ROWID3 = 0;
-    public static final int COL_NAME3 = 1;
-    public static final int COL_HISTORY_SETS = 2;
-    public static final int COL_HISTORY_REPS = 3;
-    public static final int COL_HISTORY_EXERCISE_ID= 4;
+    public static final String KEY_HISTORY_EXERCISE_ID= "PARENT_EXERCISE_ID";
+    public static final String KEY_DATETIME = "date";
 
-    public static final String[] ALL_KEYS = new String[] {KEY_ROWID, KEY_NAME, KEY_STUDENTNUM, KEY_FAVCOLOUR};
-    public static final String[] ALL_KEYS2 = new String[] {KEY_ROWID2, KEY_NAME2, KEY_STUDENTNUM2, KEY_FAVCOLOUR1,KEY_FAVCOLOUR2};
-    public static final String[] ALL_KEYS3 = new String[] {KEY_ROWID3, KEY_NAME3, KEY_HISTORY_SETS, KEY_HISTORY_REPS,KEY_HISTORY_EXERCISE_ID};
+
+
+
+    public static final int COL_ROWID_HISTORY = 0;
+    //public static final int COL_NAME_HISTORY = 1;
+    public static final int COL_HISTORY_SETS = 1;
+    public static final int COL_HISTORY_REPS = 2;
+    public static final int COL_HISTORY_EXERCISE_ID= 3;
+    public static final int COL_DATETIME = 4;
+
+    public static final String[] ALL_KEYS = new String[] {KEY_ROWID_WORKOUT, KEY_NAME_WORKOUT};
+    public static final String[] ALL_KEYS2 = new String[] {KEY_ROWID_EXERCISE, KEY_NAME_EXERCISE, KEY_EXERCISE_SETS, KEY_EXERCISE_REPS, KEY_OF_PARENT_WORKOUT_ID};
+    public static final String[] ALL_KEYS3 = new String[] {KEY_ROWID_HISTORY, KEY_HISTORY_SETS, KEY_HISTORY_REPS,KEY_HISTORY_EXERCISE_ID, KEY_DATETIME};
     // DB info: it's name, and the table we are using (just one).
     public static final String DATABASE_NAME = "MyDb";
     public static final String DATABASE_TABLE = "mainTable";
@@ -86,49 +89,26 @@ public class DBAdapter {
 
     protected static final String DATABASE_CREATE_SQL2 =
             "create table " + DATABASE_TABLE2
-                    + " (" + KEY_ROWID2 + " integer primary key autoincrement, "
-
-			/*
-			 * CHANGE 2:
-			 */
-                    //Place your fields here!
-                    // + KEY_{...} + " {type} not null"
-                    //	- Key is the column name you created above.
-                    //	- {type} is one of: text, integer, real, blob
-                    //		(http://www.sqlite.org/datatype3.html)
-                    //  - "not null" means it is a required field (must be given a value).
-                    // NOTE: All must be comma separated (end of line!) Last one must have NO comma!!
-                    + KEY_NAME2 + " text not null, "
-                    + KEY_STUDENTNUM2 + " integer not null, "
-                    + KEY_FAVCOLOUR1 + " integer not null, "
-                    + KEY_FAVCOLOUR2 + " integer not null "
+                    + " (" + KEY_ROWID_EXERCISE + " integer primary key autoincrement, "
+                    + KEY_NAME_EXERCISE + " text not null, "
+                    + KEY_EXERCISE_SETS + " integer not null, "
+                    + KEY_EXERCISE_REPS + " integer not null, "
+                    + KEY_OF_PARENT_WORKOUT_ID + " integer not null "
 
                     // Rest  of creation:
                     + ");";
 
     protected static final String DATABASE_CREATE_SQL =
             "create table " + DATABASE_TABLE
-                    + " (" + KEY_ROWID + " integer primary key autoincrement, "
+                    + " (" + KEY_ROWID_WORKOUT + " integer primary key autoincrement, "
+                    + KEY_NAME_WORKOUT + " text not null "
+                   // + KEY_STUDENTNUM + " integer not null "
+                    //+ KEY_FAVCOLOUR + " string not null "
 
-			/*
-			 * CHANGE 2:
-			 */
-                    //  Place your fields here!
-                    // + KEY_{...} + " {type} not null"
-                    //	- Key is the column name you created above.
-                    //	- {type} is one of: text, integer, real, blob
-                    //		(http://www.sqlite.org/datatype3.html)
-                    //  - "not null" means it is a required field (must be given a value).
-                    // NOTE: All must be comma separated (end of line!) Last one must have NO comma!!
-                    + KEY_NAME + " text not null, "
-                    + KEY_STUDENTNUM + " integer not null, "
-                    + KEY_FAVCOLOUR + " string not null "
-
-                    // Rest  of creation:
                     + ");";
     protected static final String DATABASE_CREATE_SQL3 =
             "create table " + DATABASE_TABLE3
-                    + " (" + KEY_ROWID3 + " integer primary key autoincrement, "
+                    + " (" + KEY_ROWID_HISTORY + " integer primary key autoincrement, "
 
 			/*
 			 * CHANGE 2:
@@ -140,10 +120,11 @@ public class DBAdapter {
                     //		(http://www.sqlite.org/datatype3.html)
                     //  - "not null" means it is a required field (must be given a value).
                     // NOTE: All must be comma separated (end of line!) Last one must have NO comma!!
-                    + KEY_NAME3 + " text not null, "
+                    //+ KEY_NAME_HISTORY + " text not null, "
                     + KEY_HISTORY_SETS + " integer not null, "
                     + KEY_HISTORY_REPS + " integer not null, "
-                    + KEY_HISTORY_EXERCISE_ID + " integer not null "
+                    + KEY_HISTORY_EXERCISE_ID + " integer not null, "
+                    + KEY_DATETIME + " integer "
 
                     // Rest  of creation:
                     + ");";
@@ -180,7 +161,7 @@ public class DBAdapter {
     }
 
     // Add a new set of values to the database.
-    public long insertRow(String name, int studentNum, String favColour){
+    public long insertRow(String name){
     //public long insertRow(String name) {
 		/*
 		 * CHANGE 3:
@@ -189,9 +170,9 @@ public class DBAdapter {
         // Also change the function's arguments to be what you need!
         // Create row's data:
         ContentValues initialValues = new ContentValues();
-        initialValues.put(KEY_NAME, name);
-        initialValues.put(KEY_STUDENTNUM, studentNum);
-        initialValues.put(KEY_FAVCOLOUR, favColour);
+        initialValues.put(KEY_NAME_WORKOUT, name);
+        //initialValues.put(KEY_STUDENTNUM, studentNum);
+        //initialValues.put(KEY_FAVCOLOUR, favColour);
 
         // Insert it into the database.
         return db.insert(DATABASE_TABLE, null, initialValues);
@@ -202,42 +183,42 @@ public class DBAdapter {
 
         // Create row's data:
         ContentValues initialValues = new ContentValues();
-        initialValues.put(KEY_NAME2, name);
-        initialValues.put(KEY_STUDENTNUM2, studentNum);
-        initialValues.put(KEY_FAVCOLOUR1, favColour);
-        initialValues.put(KEY_FAVCOLOUR2, favColour2);
+        initialValues.put(KEY_NAME_EXERCISE, name);
+        initialValues.put(KEY_EXERCISE_SETS, studentNum);
+        initialValues.put(KEY_EXERCISE_REPS, favColour);
+        initialValues.put(KEY_OF_PARENT_WORKOUT_ID, favColour2);
 
         // Insert it into the database.
         return db.insert(DATABASE_TABLE2, null, initialValues);
     }
 
-    public long insertRow3(String name, int sets, int reps, int id){
+    public long insertRow3( int sets, int reps, int id){
 
         // Create row's data:
         ContentValues initialValues = new ContentValues();
-        initialValues.put(KEY_NAME3, name);
+        //initialValues.put(KEY_NAME_HISTORY, name);
         initialValues.put(KEY_HISTORY_SETS, sets);
         initialValues.put(KEY_HISTORY_REPS, reps);
         initialValues.put(KEY_HISTORY_EXERCISE_ID, id);
-
+        initialValues.put(KEY_DATETIME, System.currentTimeMillis());
         // Insert it into the database.
         return db.insert(DATABASE_TABLE3, null, initialValues);
     }
 
     // Delete a row from the database, by rowId (primary key)
     public boolean deleteRow(long rowId) {
-        String where = KEY_ROWID + "=" + rowId;
+        String where = KEY_ROWID_WORKOUT + "=" + rowId;
         return db.delete(DATABASE_TABLE, where, null) != 0;
     }
 
     public boolean deleteRow2(long rowId) {
-        String where = KEY_ROWID2 + "=" + rowId;
+        String where = KEY_ROWID_EXERCISE + "=" + rowId;
         return db.delete(DATABASE_TABLE2, where, null) != 0;
     }
 
     public void deleteAll() {
         Cursor c = getAllRows();
-        long rowId = c.getColumnIndexOrThrow(KEY_ROWID);
+        long rowId = c.getColumnIndexOrThrow(KEY_ROWID_WORKOUT);
         if (c.moveToFirst()) {
             do {
                 deleteRow(c.getLong((int) rowId));
@@ -248,7 +229,7 @@ public class DBAdapter {
 
     public void deleteAll2() {
         Cursor c = getAllRows2();
-        long rowId = c.getColumnIndexOrThrow(KEY_ROWID2);
+        long rowId = c.getColumnIndexOrThrow(KEY_ROWID_EXERCISE);
         if (c.moveToFirst()) {
             do {
                 deleteRow2(c.getLong((int) rowId));
@@ -275,10 +256,19 @@ public class DBAdapter {
         }
         return c;
     }
+    public Cursor getAllRows3() {
+        String where = null;
+        Cursor c = 	db.query(true, DATABASE_TABLE3, ALL_KEYS3,
+                where, null, null, null, null, null);
+        if (c != null) {
+            c.moveToFirst();
+        }
+        return c;
+    }
 
     // Get a specific row (by rowId)
     public Cursor getRow(long rowId) {
-        String where = KEY_ROWID + "=" + rowId;
+        String where = KEY_ROWID_WORKOUT + "=" + rowId;
         Cursor c = 	db.query(true, DATABASE_TABLE, ALL_KEYS,
                 where, null, null, null, null, null);
         if (c != null) {
@@ -288,7 +278,7 @@ public class DBAdapter {
     }
 
     public Cursor getRow2(long rowId) {
-        String where = KEY_ROWID2 + "=" + rowId;
+        String where = KEY_ROWID_EXERCISE + "=" + rowId;
         Cursor c = 	db.query(true, DATABASE_TABLE2, ALL_KEYS2,
                 where, null, null, null, null, null);
         if (c != null) {
@@ -298,7 +288,7 @@ public class DBAdapter {
     }
 
     public Cursor getRow3(long rowId) {
-        String where = KEY_ROWID3 + "=" + rowId;
+        String where = KEY_ROWID_HISTORY + "=" + rowId;
         Cursor c = 	db.query(true, DATABASE_TABLE3, ALL_KEYS3,
                 where, null, null, null, null, null);
         if (c != null) {
@@ -309,7 +299,7 @@ public class DBAdapter {
 
 
     public Cursor getRowByString(String name) {
-        String where = KEY_NAME + "=" + name;
+        String where = KEY_NAME_WORKOUT + "=" + name;
         Cursor c = 	db.query(true, DATABASE_TABLE, ALL_KEYS,
                 where, null, null, null, null, null);
         if (c != null) {
@@ -320,7 +310,7 @@ public class DBAdapter {
     // Change an existing row to be equal to new data.
     //public boolean updateRow(long rowId, String name, int studentNum, String favColour) {
     public boolean updateRow(long rowId, String name) {
-        String where = KEY_ROWID + "=" + rowId;
+        String where = KEY_ROWID_WORKOUT + "=" + rowId;
 
 		/*
 		 * CHANGE 4:
@@ -329,7 +319,7 @@ public class DBAdapter {
         // Also change the function's arguments to be what you need!
         // Create row's data:
         ContentValues newValues = new ContentValues();
-        newValues.put(KEY_NAME, name);
+        newValues.put(KEY_NAME_WORKOUT, name);
         //newValues.put(KEY_STUDENTNUM, studentNum);
         //newValues.put(KEY_FAVCOLOUR, favColour);
 
@@ -337,7 +327,7 @@ public class DBAdapter {
         return db.update(DATABASE_TABLE, newValues, where, null) != 0;
     }
     public boolean updateRow2(long rowId,int sets, int reps) {
-        String where = KEY_ROWID2 + "=" + rowId;
+        String where = KEY_ROWID_EXERCISE + "=" + rowId;
 
 		/*
 		 * CHANGE 4:
@@ -346,9 +336,9 @@ public class DBAdapter {
         //  Also change the function's arguments to be what you need!
         // Create row's data:
         ContentValues newValues = new ContentValues();
-        //newValues.put(KEY_NAME, name);
-        newValues.put(KEY_STUDENTNUM2, sets);
-        newValues.put(KEY_FAVCOLOUR1, reps);
+        //newValues.put(KEY_NAME_WORKOUT, name);
+        newValues.put(KEY_EXERCISE_SETS, sets);
+        newValues.put(KEY_EXERCISE_REPS, reps);
 
         // Insert it into the database.
         return db.update(DATABASE_TABLE2, newValues, where, null) != 0;

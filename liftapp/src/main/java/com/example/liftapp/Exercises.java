@@ -1,24 +1,16 @@
 package com.example.liftapp;
 
 //import android.annotation.TargetApi;
-import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
@@ -80,11 +72,11 @@ public class Exercises extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View viewClicked,int position, long id) {
                 Workouts clickedCar = myWorkouts2.get(position);
                 Cursor cursor = myDb.getRow2(clickedCar.getID());
-                //Long rowIDLong = cursor.getLong(DBAdapter.COL_ROWID);
+                //Long rowIDLong = cursor.getLong(DBAdapter.COL_ROWID_WORKOUT);
                 //String
                 //String LongRowID = Long.toString(rowIDLong);
                 //int IntRowID = Integer.parseInt(LongRowID);
-                //String name = cursor.getString(DBAdapter.COL_NAME2);
+                //String name = cursor.getString(DBAdapter.COL_NAME_EXERCISE);
 
 
                 //int sets = cursor.getInt(IntRowID);
@@ -95,10 +87,10 @@ public class Exercises extends ActionBarActivity {
 
                 }
                 else{
-                    sets = cursor.getInt(DBAdapter.COL_STUDENTNUM2);
-                    reps = cursor.getInt(DBAdapter.COL_FAVCOLOUR1);
-                    exerciseNamexercise = cursor.getString(DBAdapter.COL_NAME2);
-                    LongRowID = cursor.getLong(DBAdapter.COL_ROWID2);
+                    sets = cursor.getInt(DBAdapter.COL_EXERCISE_SETS);
+                    reps = cursor.getInt(DBAdapter.COL_EXERCISE_REPS);
+                    exerciseNamexercise = cursor.getString(DBAdapter.COL_NAME_EXERCISE);
+                    LongRowID = cursor.getLong(DBAdapter.COL_ROWID_EXERCISE);
                     //ReturnSets();
                    // ReturnName(exerciseName);
                     //ReturnReps(reps);
@@ -162,7 +154,7 @@ public class Exercises extends ActionBarActivity {
     private void displayRecordSetz(Cursor cursor) {
         String message = "";
         // populate the message from the cursor
-        //int LongRow = cursor.getInt(DBAdapter.COL_FAVCOLOUR2);
+        //int LongRow = cursor.getInt(DBAdapter.COL_OF_PARENT_WORKOUT_ID);
         String LongRowID = Long.toString(fromMainActivity.rowIDLong());
         int IntRowID = Integer.parseInt(LongRowID);
         // Reset cursor to start, checking to see if there's data:
@@ -170,12 +162,12 @@ public class Exercises extends ActionBarActivity {
 
                 do {
                     // Process the data:
-                    int id = cursor.getInt(DBAdapter.COL_ROWID2);
-                    String name = cursor.getString(DBAdapter.COL_NAME2);
-                    int studentNumber = cursor.getInt(DBAdapter.COL_STUDENTNUM2);
-                    int favColour = cursor.getInt(DBAdapter.COL_FAVCOLOUR1);
+                    int id = cursor.getInt(DBAdapter.COL_ROWID_EXERCISE);
+                    String name = cursor.getString(DBAdapter.COL_NAME_EXERCISE);
+                    int studentNumber = cursor.getInt(DBAdapter.COL_EXERCISE_SETS);
+                    int favColour = cursor.getInt(DBAdapter.COL_EXERCISE_REPS);
                     int RowNumber = cursor.getCount();
-                    int LongRow = cursor.getInt(DBAdapter.COL_FAVCOLOUR2);
+                    int LongRow = cursor.getInt(DBAdapter.COL_OF_PARENT_WORKOUT_ID);
                     // Append data to the message:
                     message += " name =" + name
 

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/txtCounterReps"
+        android:id="@+id/txtCounterReps1"
         android:layout_gravity="center"
         android:textSize="70dp"
         android:layout_alignBottom="@+id/textView"
@@ -28,7 +28,8 @@
         android:visibility="visible"
         android:background="@android:color/transparent"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/txtCounterReps1" />
 
 
     <MediaController
@@ -66,7 +67,7 @@
         android:id="@+id/textView2"
         android:textSize="30dp"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/txtCounterReps"
+        android:layout_toRightOf="@+id/txtCounterReps1"
         android:layout_marginLeft="53dp" />
 
     <TextView
@@ -79,6 +80,14 @@
         android:layout_alignBottom="@+id/textView"
         android:layout_alignRight="@+id/btnUp"
         android:layout_alignEnd="@+id/btnUp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="check"
+        android:id="@+id/btnCheck"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
 

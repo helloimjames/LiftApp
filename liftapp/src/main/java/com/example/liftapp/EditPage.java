@@ -3,7 +3,6 @@ package com.example.liftapp;
 import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,13 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class EditPage extends ActionBarActivity {
     //private List<Workouts> myWorkouts = new ArrayList<Workouts>();
@@ -56,7 +51,7 @@ public class EditPage extends ActionBarActivity {
                     return;
                 }
                 else if(TxtNewWorkout.length() > 0){
-                myDb.insertRow(TxtNewWorkout,1,"green");
+                myDb.insertRow(TxtNewWorkout);
                 Cursor cursor = myDb.getAllRows();
                 displayRecordSet(cursor);
 
@@ -133,8 +128,8 @@ public class EditPage extends ActionBarActivity {
         if (cursor.moveToFirst()) {
             do {
                 // Process the data:
-                int id = cursor.getInt(DBAdapter.COL_ROWID);
-                String name = cursor.getString(DBAdapter.COL_NAME);
+                int id = cursor.getInt(DBAdapter.COL_ROWID_WORKOUT);
+                String name = cursor.getString(DBAdapter.COL_NAME_WORKOUT);
                 //int studentNumber = cursor.getInt(DBAdapter.COL_STUDENTNUM);
                // String favColour = cursor.getString(DBAdapter.COL_FAVCOLOUR);
                 int RowNumber = cursor.getCount();
