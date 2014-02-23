@@ -47,18 +47,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.example.liftapp" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f697a8f-6589-417c-9771-790a45f5459c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/AddExercise.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/AddExercise.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/DBAdapter.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/DBAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditExercise.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditExercise.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditPage.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditWorkout.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditWorkout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_counter.xml" afterPath="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_counter.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="7f697a8f-6589-417c-9771-790a45f5459c" name="Default" comment="" />
     <ignored path="Lift App.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -1346,7 +1335,11 @@
       <created>1393026033111</created>
       <updated>1393026033111</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="reversed changes from previously pulled windows app&#10;&#10;Refactored database">
+      <created>1393171471114</created>
+      <updated>1393171471114</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1446,7 +1439,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="reversed changes from previously pulled windows app" />
-    <option name="LAST_COMMIT_MESSAGE" value="reversed changes from previously pulled windows app" />
+    <MESSAGE value="reversed changes from previously pulled windows app&#10;&#10;Refactored database" />
+    <option name="LAST_COMMIT_MESSAGE" value="reversed changes from previously pulled windows app&#10;&#10;Refactored database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
