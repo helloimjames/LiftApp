@@ -54,7 +54,7 @@ public class EditPage extends ActionBarActivity {
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent e) {
-        //if (e.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
+
         if (e.getKeyCode() == KeyEvent.KEYCODE_ENTER && e.getAction()==0) {
             Toast.makeText(EditPage.this, "You hit enter", Toast.LENGTH_LONG).show();
             TextView editTxtNewWorkout = (TextView) findViewById(R.id.editTxtNewWorkout);

@@ -14,23 +14,14 @@ import android.view.ViewGroup;
  */
 public class Incrementor {
 
-    int newNumberValue = 0;
+    int newNumberValue;
     public Integer AddOne(){
         newNumberValue++;
         return newNumberValue;
     }
 
 
-    public Integer SubtractOne(){
-        newNumberValue--;
-        if (newNumberValue <= 0){
 
-            newNumberValue = 0;
-            return newNumberValue;
-        }
-
-        return newNumberValue;
-    }
 
 }
 

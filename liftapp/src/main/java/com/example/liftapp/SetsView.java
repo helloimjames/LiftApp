@@ -15,7 +15,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class SetsView extends Activity {
@@ -23,7 +25,9 @@ public class SetsView extends Activity {
     DBAdapter myDb;
     private List<Workouts> myWorkouts2 = new ArrayList<Workouts>();
     public static int SetNumber;
+    public static long returnedHistoryIDORNOT = 0;
     public static long SetNumberRowId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,7 +89,7 @@ public class SetsView extends Activity {
             TextView exerciseText2 = (TextView) itemView.findViewById(R.id.tvRepsSpecified);
             String b = ""+ currentCar.getID();
             exerciseText2.setText(b);
-            //exerciseText.setText("yo");
+
 
 
             return itemView;
@@ -124,17 +128,28 @@ public class SetsView extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View viewClicked,int position, long id) {
                 Workouts clickedCar = myWorkouts2.get(position);
-                //Cursor cursor = myDb.getRow2(clickedCar.getID());
+
+
                 SetNumber = clickedCar.getSet();
                 SetNumber= position+1;
-                String LongRowID = Long.toString(fromExerciseActivity.IntRowID());
-                int IntRowID = Integer.parseInt(LongRowID);
-                SetNumberRowId = myDb.insertRow3(0, 0, IntRowID, SetNumber);
+                Cursor cursor = myDb.getAllRows3();
 
-                //String a = ""+ SetNumberRowId;
-                //Toast.makeText(SetsView.this, a, Toast.LENGTH_LONG).show();
-                startActivity(new Intent(SetsView.this, Counter.class));
+                if (checkForExistingHistory(cursor) > 0){
+                    startActivity(new Intent(SetsView.this, Counter.class));
+                    SetNumberRowId = returnedHistoryIDORNOT;
+                    Toast.makeText(SetsView.this, "in if "+String.valueOf(SetNumberRowId), Toast.LENGTH_LONG).show();
                 }
+
+                else{
+                    String LongRowID = Long.toString(fromExerciseActivity.IntRowID());
+                    int IntRowID = Integer.parseInt(LongRowID);
+                    SetNumberRowId = myDb.insertRow3(0, 0, IntRowID, SetNumber);
+                    Toast.makeText(SetsView.this, "in else "+String.valueOf(SetNumberRowId), Toast.LENGTH_LONG).show();
+                    //String a = ""+ SetNumberRowId;
+                    //Toast.makeText(SetsView.this, a, Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(SetsView.this, Counter.class));
+                }
+            }
 
 
         });
@@ -150,5 +165,43 @@ public class SetsView extends Activity {
         return super.onKeyDown(keyCode, event);
     }
 
+
+
+    private long checkForExistingHistory(Cursor cursor) {
+
+        String message = "";
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        String currentDate = dateFormat.format(date);
+        //long returnedHistoryIDORNOT;
+        if (cursor.moveToFirst()) {
+
+            do {
+                // Process the data:
+
+                int id = cursor.getInt(DBAdapter.COL_HISTORY_EXERCISE_ID);
+                String date2 = cursor.getString(DBAdapter.COL_DATETIME);
+                int setNumberFromHistory = cursor.getInt(DBAdapter.COL_SET_NUMBER);
+                long historyLongID = cursor.getInt(DBAdapter.COL_ROWID_HISTORY);
+
+                message += " date =" + date
+
+                        +"\n";
+                if(currentDate.equals(date2) && id == SetNumber && setNumberFromHistory == fromExerciseActivity.IntRowID() ){
+
+                    Toast.makeText(SetsView.this,"all match will grab id of "+ String.valueOf(returnedHistoryIDORNOT) , Toast.LENGTH_LONG).show();
+                    returnedHistoryIDORNOT = historyLongID;
+                    break;
+                    //TODO its when you go back it fucks up
+
+                }
+
+
+            } while(cursor.moveToNext());
+
+        }
+
+        return returnedHistoryIDORNOT;
+    }
 
 }

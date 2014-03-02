@@ -48,15 +48,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f697a8f-6589-417c-9771-790a45f5459c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/AddExercise.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/AddExercise.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/DBAdapter.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/DBAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditPage.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditWorkout.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditWorkout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Incrementor.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Incrementor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/res/layout/activity_exercises.xml" afterPath="$PROJECT_DIR$/liftapp/src/main/res/layout/activity_exercises.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_page.xml" afterPath="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_page.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_counter.xml" afterPath="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_counter.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml" afterPath="$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Lift App.iws" />
@@ -120,37 +119,50 @@
     <favorites_list name="Lift App" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.55241156">
       <split-first>
         <leaf>
           <file leaf-file-name="Counter.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="74" column="0" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="2205">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SetsView.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="131" column="63" selection-start="3986" selection-end="3986" vertical-scroll-proportion="0.78" vertical-offset="744" max-vertical-offset="1725">
+                <state line="77" column="40" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.0" vertical-offset="620" max-vertical-offset="2100">
                   <folding>
-                    <element signature="method#getView#0;class#MyListAdapter#0;class#SetsView#0" expanded="false" />
-                    <element signature="method#onDestroy#0;class#SetsView#0" expanded="false" />
-                    <element signature="method#openDB#0;class#SetsView#0" expanded="false" />
-                    <element signature="method#closeDB#0;class#SetsView#0" expanded="false" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Workouts.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Workouts.java">
+          <file leaf-file-name="EditPage.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditPage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="58" selection-start="242" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="675">
+                <state line="57" column="38" selection-start="1758" selection-end="1766" vertical-scroll-proportion="0.2838428" vertical-offset="660" max-vertical-offset="2625">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="fragment_edit_page.xml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_page.xml">
+              <provider editor-type-id="android-designer">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="13" column="20" selection-start="639" selection-end="639" vertical-scroll-proportion="-7.2222223" vertical-offset="0" max-vertical-offset="780">
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Incrementor.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Incrementor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="23" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -158,7 +170,7 @@
           <file leaf-file-name="EditWorkout.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditWorkout.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="109" column="57" selection-start="4059" selection-end="4096" vertical-scroll-proportion="0.0" vertical-offset="1166" max-vertical-offset="2400">
+                <state line="22" column="76" selection-start="684" selection-end="752" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2205">
                   <folding />
                 </state>
               </provider>
@@ -167,7 +179,7 @@
           <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="58" column="51" selection-start="1829" selection-end="1831" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="3315">
+                <state line="39" column="77" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2955">
                   <folding />
                 </state>
               </provider>
@@ -177,11 +189,23 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="DBAdapter.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="DBAdapter.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/DBAdapter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="369" column="38" selection-start="13130" selection-end="13130" vertical-scroll-proportion="0.36285713" vertical-offset="5146" max-vertical-offset="6135">
+                <state line="211" column="63" selection-start="7980" selection-end="8003" vertical-scroll-proportion="0.0" vertical-offset="2720" max-vertical-offset="6135">
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SetsView.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="194" column="59" selection-start="6339" selection-end="6339" vertical-scroll-proportion="0.6142857" vertical-offset="2210" max-vertical-offset="2910">
+                  <folding>
+                    <element signature="e#3466#4798#0" expanded="true" />
+                    <element signature="e#4785#4786#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -865,7 +889,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/liftapp/src/main/java/Workouts.java" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Incrementor.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_main.xml" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/item_exercise.xml" />
@@ -881,18 +904,19 @@
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditExercise.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/activity_sets_view.xml" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_add_exercise.xml" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_counter.xml" />
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Workouts.java" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/activity_exercises.xml" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditPage.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_page.xml" />
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/AddExercise.java" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditWorkout.java" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_counter.xml" />
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/DBAdapter.java" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditWorkout.java" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Incrementor.java" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditPage.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java" />
       </list>
     </option>
@@ -905,7 +929,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1910" />
+    <option name="x" value="-1900" />
     <option name="y" value="-278" />
     <option name="width" value="1883" />
     <option name="height" value="1171" />
@@ -962,6 +986,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1138,7 +1163,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1148,7 +1172,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.import" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -1227,6 +1251,19 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1252,19 +1289,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1410,12 +1434,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1910" y="-278" width="1883" height="1171" extended-state="0" />
-    <editor active="false" />
+    <frame x="-1900" y="-278" width="1883" height="1171" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34492123" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41952983" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39814815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1424,8 +1449,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29206964" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29763034" sideWeight="0.5163435" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29194313" sideWeight="0.4997284" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29763034" sideWeight="0.5154807" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.80442375" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1433,11 +1458,10 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15535036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30367506" sideWeight="0.4836565" order="2" side_tool="true" content_ui="tabs" x="-1796" y="195" width="1488" height="248" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29763034" sideWeight="0.4839761" order="2" side_tool="true" content_ui="tabs" x="-1796" y="195" width="1488" height="248" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34504792" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1471,19 +1495,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/item_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="65" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="315" />
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="65" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="315" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
-      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java">
@@ -1494,19 +1518,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/item_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="65" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="315" />
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="65" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="315" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
-      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java">
@@ -1517,19 +1541,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/item_view.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120" />
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
-      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java">
@@ -1545,19 +1569,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/item_view.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660" />
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
-      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java">
@@ -1573,19 +1597,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/item_view.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660" />
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
-      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/widget/AdapterView.class">
@@ -1607,22 +1631,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Incrementor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="1" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525" />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/java/lang/Long.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="19" selection-start="158" selection-end="158" vertical-scroll-proportion="0.14534883" vertical-offset="0" max-vertical-offset="1350" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="20" selection-start="796" selection-end="796" vertical-scroll-proportion="0.63190186" vertical-offset="6" max-vertical-offset="510" />
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="20" selection-start="796" selection-end="796" vertical-scroll-proportion="0.63190186" vertical-offset="6" max-vertical-offset="510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -1647,107 +1666,81 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_edit_exercise.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="881">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_workout.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_workout.xml">
       <provider editor-type-id="text-editor">
         <state line="56" column="20" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1020" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/item_view.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/item_view.xml">
       <provider editor-type-id="text-editor">
         <state line="10" column="33" selection-start="429" selection-end="437" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="315" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_exercises.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_exercises.xml">
       <provider editor-type-id="text-editor">
         <state line="10" column="20" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_add_exercise.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_add_exercise.xml">
       <provider editor-type-id="text-editor">
         <state line="13" column="20" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_exercise.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_sets_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="20" selection-start="962" selection-end="962" vertical-scroll-proportion="0.5092593" vertical-offset="0" max-vertical-offset="648">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_exercise.xml">
       <provider editor-type-id="text-editor">
         <state line="22" column="63" selection-start="0" selection-end="3655" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1410" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_add_exercise.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_add_exercise.xml">
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_counter.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="20" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.5958084" vertical-offset="157" max-vertical-offset="825">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml">
-      <provider editor-type-id="text-editor">
-        <state line="22" column="20" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="1080" />
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_counter.xml">
-      <provider editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185" />
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/view/KeyEvent.class">
@@ -1756,13 +1749,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_exercises.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="20" column="20" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="480">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java">
@@ -1773,29 +1766,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_edit_page.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_page.xml">
-      <provider editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="0" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780" />
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.518018" vertical-offset="450" max-vertical-offset="2625">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1815,47 +1791,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Workouts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="58" selection-start="242" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+        <state line="12" column="58" selection-start="242" selection-end="251" vertical-scroll-proportion="0.25245443" vertical-offset="0" max-vertical-offset="713">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="51" selection-start="1829" selection-end="1831" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="2925">
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_counter.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="15" column="20" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1050">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/DBAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="369" column="38" selection-start="13130" selection-end="13130" vertical-scroll-proportion="0.36285713" vertical-offset="5146" max-vertical-offset="6135">
+        <state line="211" column="63" selection-start="7980" selection-end="8003" vertical-scroll-proportion="0.0" vertical-offset="2720" max-vertical-offset="6135">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditWorkout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="57" selection-start="4059" selection-end="4096" vertical-scroll-proportion="0.0" vertical-offset="1166" max-vertical-offset="2400">
+        <state line="22" column="76" selection-start="684" selection-end="752" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2205">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/activity_sets_view.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="20" selection-start="962" selection-end="962" vertical-scroll-proportion="0.49034175" vertical-offset="0" max-vertical-offset="673">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="22" column="20" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="1215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="77" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Incrementor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="0" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1995">
+        <state line="77" column="40" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.0" vertical-offset="620" max-vertical-offset="2100">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_page.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="20" selection-start="639" selection-end="639" vertical-scroll-proportion="-7.2222223" vertical-offset="0" max-vertical-offset="780">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="38" selection-start="1758" selection-end="1766" vertical-scroll-proportion="0.2838428" vertical-offset="660" max-vertical-offset="2625">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="63" selection-start="3986" selection-end="3986" vertical-scroll-proportion="0.78" vertical-offset="744" max-vertical-offset="1725">
+        <state line="194" column="59" selection-start="6339" selection-end="6339" vertical-scroll-proportion="0.6142857" vertical-offset="2210" max-vertical-offset="2910">
           <folding>
-            <element signature="method#getView#0;class#MyListAdapter#0;class#SetsView#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#SetsView#0" expanded="false" />
-            <element signature="method#openDB#0;class#SetsView#0" expanded="false" />
-            <element signature="method#closeDB#0;class#SetsView#0" expanded="false" />
+            <element signature="e#3466#4798#0" expanded="true" />
+            <element signature="e#4785#4786#0" expanded="true" />
           </folding>
         </state>
       </provider>

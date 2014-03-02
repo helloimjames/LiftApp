@@ -2,6 +2,8 @@ package com.example.liftapp;
 //This is a test
 import android.content.Intent;
 import android.database.Cursor;
+import android.media.AudioManager;
+import android.media.ToneGenerator;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -35,6 +37,8 @@ public class MainActivity extends ActionBarActivity {
         populateListView();
         registerClickCallback();
         registerLongClickCallback();
+        ToneGenerator toneG = new ToneGenerator(AudioManager.STREAM_ALARM, 50);
+        toneG.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 200);
     }
     private void openDB() {
         myDb = new DBAdapter(this);

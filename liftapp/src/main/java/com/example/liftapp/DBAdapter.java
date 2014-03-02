@@ -201,7 +201,7 @@ public class DBAdapter {
 
     public long insertRow3( int sets, int reps, int id, int setNumber){
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
         // Create row's data:
         ContentValues initialValues = new ContentValues();
