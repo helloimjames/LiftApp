@@ -41,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
         myDb.open();
     }
     private void populateWorkoutList() {
-        myWorkouts.add(new Workouts("+",0));
+        myWorkouts.add(new Workouts("+",0,0));
         Cursor cursor = myDb.getAllRows();
         displayRecordSet(cursor);
 
@@ -56,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
                 int id = cursor.getInt(DBAdapter.COL_ROWID_WORKOUT);
                 String name = cursor.getString(DBAdapter.COL_NAME_WORKOUT);
                 int RowNumber = cursor.getCount();
-                myWorkouts.add(new Workouts(name,id));
+                myWorkouts.add(new Workouts(name,id,0));
             } while(cursor.moveToNext());
         }
 

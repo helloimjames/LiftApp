@@ -15,7 +15,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 // TO USE:
@@ -49,6 +51,8 @@ public class DBAdapter {
     public static final int COL_EXERCISE_REPS = 3;
     public static final String KEY_OF_PARENT_WORKOUT_ID = "PARENT_WORKOUT_ID";
     public static final int COL_OF_PARENT_WORKOUT_ID = 4;
+    public static final String KEY_SET_NUMBER = "set_number";
+    public static final int COL_SET_NUMBER = 5;
 
 
 
@@ -77,7 +81,7 @@ public class DBAdapter {
 
     public static final String[] ALL_KEYS = new String[] {KEY_ROWID_WORKOUT, KEY_NAME_WORKOUT};
     public static final String[] ALL_KEYS2 = new String[] {KEY_ROWID_EXERCISE, KEY_NAME_EXERCISE, KEY_EXERCISE_SETS, KEY_EXERCISE_REPS, KEY_OF_PARENT_WORKOUT_ID};
-    public static final String[] ALL_KEYS3 = new String[] {KEY_ROWID_HISTORY, KEY_HISTORY_SETS, KEY_HISTORY_REPS,KEY_HISTORY_EXERCISE_ID, KEY_DATETIME};
+    public static final String[] ALL_KEYS3 = new String[] {KEY_ROWID_HISTORY, KEY_HISTORY_SETS, KEY_HISTORY_REPS,KEY_HISTORY_EXERCISE_ID, KEY_DATETIME, KEY_SET_NUMBER};
     // DB info: it's name, and the table we are using (just one).
     public static final String DATABASE_NAME = "MyDb";
     public static final String DATABASE_TABLE = "mainTable";
@@ -86,6 +90,15 @@ public class DBAdapter {
 
     // Track DB version if a new version of your app changes the format.
     public static final int DATABASE_VERSION = 3;
+
+    protected static final String DATABASE_CREATE_SQL =
+            "create table " + DATABASE_TABLE
+                    + " (" + KEY_ROWID_WORKOUT + " integer primary key autoincrement, "
+                    + KEY_NAME_WORKOUT + " text not null "
+                    // + KEY_STUDENTNUM + " integer not null "
+                    //+ KEY_FAVCOLOUR + " string not null "
+
+                    + ");";
 
     protected static final String DATABASE_CREATE_SQL2 =
             "create table " + DATABASE_TABLE2
@@ -98,14 +111,7 @@ public class DBAdapter {
                     // Rest  of creation:
                     + ");";
 
-    protected static final String DATABASE_CREATE_SQL =
-            "create table " + DATABASE_TABLE
-                    + " (" + KEY_ROWID_WORKOUT + " integer primary key autoincrement, "
-                    + KEY_NAME_WORKOUT + " text not null "
-                   // + KEY_STUDENTNUM + " integer not null "
-                    //+ KEY_FAVCOLOUR + " string not null "
 
-                    + ");";
     protected static final String DATABASE_CREATE_SQL3 =
             "create table " + DATABASE_TABLE3
                     + " (" + KEY_ROWID_HISTORY + " integer primary key autoincrement, "
@@ -124,7 +130,8 @@ public class DBAdapter {
                     + KEY_HISTORY_SETS + " integer not null, "
                     + KEY_HISTORY_REPS + " integer not null, "
                     + KEY_HISTORY_EXERCISE_ID + " integer not null, "
-                    + KEY_DATETIME + " integer "
+                    + KEY_DATETIME + " text not null, "
+                    + KEY_SET_NUMBER + " integer not null "
 
                     // Rest  of creation:
                     + ");";
@@ -192,15 +199,18 @@ public class DBAdapter {
         return db.insert(DATABASE_TABLE2, null, initialValues);
     }
 
-    public long insertRow3( int sets, int reps, int id){
+    public long insertRow3( int sets, int reps, int id, int setNumber){
 
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
         // Create row's data:
         ContentValues initialValues = new ContentValues();
         //initialValues.put(KEY_NAME_HISTORY, name);
         initialValues.put(KEY_HISTORY_SETS, sets);
         initialValues.put(KEY_HISTORY_REPS, reps);
         initialValues.put(KEY_HISTORY_EXERCISE_ID, id);
-        initialValues.put(KEY_DATETIME, System.currentTimeMillis());
+        initialValues.put(KEY_DATETIME, dateFormat.format(date));
+        initialValues.put(KEY_SET_NUMBER, setNumber);
         // Insert it into the database.
         return db.insert(DATABASE_TABLE3, null, initialValues);
     }

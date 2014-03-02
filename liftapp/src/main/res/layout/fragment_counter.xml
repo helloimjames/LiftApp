@@ -16,8 +16,9 @@
         android:id="@+id/txtCounterReps1"
         android:layout_gravity="center"
         android:textSize="70dp"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_toRightOf="@+id/textView" />
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btnCheck"
+        android:layout_marginRight="36dp" />
 
     <Button
         android:layout_width="match_parent"
@@ -47,47 +48,25 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/mediaController" />
 
-    <TextView
-        android:layout_width="97dp"
-        android:layout_height="45dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Reps"
-        android:id="@+id/textView"
-        android:layout_gravity="left|center_vertical"
-        android:textSize="30dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Sets"
-        android:id="@+id/textView2"
-        android:textSize="30dp"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/txtCounterReps1"
-        android:layout_marginLeft="53dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="0"
-        android:id="@+id/txtCounterSets"
-        android:textSize="70dp"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_alignRight="@+id/btnUp"
-        android:layout_alignEnd="@+id/btnUp" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="check"
         android:id="@+id/btnCheck"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBottom="@+id/txtCounterReps1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="REPS:"
+        android:id="@+id/textView"
+        android:singleLine="true"
+        android:textSize="50dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/mediaController" />
 
 </RelativeLayout>
 

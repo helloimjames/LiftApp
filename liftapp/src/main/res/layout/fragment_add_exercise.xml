@@ -11,7 +11,7 @@
     <NumberPicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/npSets"
+        android:id="@+id/npReps"
         android:layout_marginTop="45dp"
         android:layout_below="@+id/editTxtAddExercise"
         android:layout_toLeftOf="@+id/btnDestroyExerciseRecords" />
@@ -19,8 +19,8 @@
     <NumberPicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/npReps"
-        android:layout_alignTop="@+id/npSets"
+        android:id="@+id/npSets"
+        android:layout_alignTop="@+id/npReps"
         android:layout_alignRight="@+id/btnAddExercise"
         android:layout_alignEnd="@+id/btnAddExercise" />
 
@@ -30,9 +30,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="SETS"
         android:id="@+id/textView2"
-        android:layout_above="@+id/npReps"
-        android:layout_alignLeft="@+id/npReps"
-        android:layout_alignStart="@+id/npReps" />
+        android:layout_above="@+id/npSets"
+        android:layout_alignLeft="@+id/npSets"
+        android:layout_alignStart="@+id/npSets" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,8 +41,8 @@
         android:text="REPS"
         android:id="@+id/textView3"
         android:layout_alignTop="@+id/textView2"
-        android:layout_alignRight="@+id/npSets"
-        android:layout_alignEnd="@+id/npSets" />
+        android:layout_alignRight="@+id/npReps"
+        android:layout_alignEnd="@+id/npReps" />
 
     <TextView
         android:layout_width="wrap_content"

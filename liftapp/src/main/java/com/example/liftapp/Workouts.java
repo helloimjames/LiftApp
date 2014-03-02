@@ -5,29 +5,31 @@ package com.example.liftapp;
  */
 public class Workouts {
     private String exercise;
-    //private int set;
+    private int set;
     //private int rep;
     private long id;
     
 
-    public Workouts(String exercise, int id) {
+    public Workouts(String exercise, int id, int setNumber) {
         super();
         this.exercise = exercise;
-        //this.set = set;
+        this.set = setNumber;
         //this.rep = rep;
         this.id = id;
         
     }
+
+
 
     public String getExercise() {
         return exercise;
     }
 
 
-    /*public int getSet() {
+    public int getSet() {
         return set;
     }
-    public int getRep() {
+    /*public int getRep() {
         return rep;
     }
     */

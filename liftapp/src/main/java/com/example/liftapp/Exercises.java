@@ -34,7 +34,7 @@ public class Exercises extends ActionBarActivity {
 
         openDB();
         ReturnSets();
-
+        registerLongClickCallback();
         populateWorkoutList();
         populateListView();
         registerClickCallback();
@@ -44,7 +44,7 @@ public class Exercises extends ActionBarActivity {
     }
 
     public void populateWorkoutList() {
-        myWorkouts2.add(new Workouts("+",0));
+        myWorkouts2.add(new Workouts("+",0,0));
         Cursor cursor = myDb.getAllRows2();
         displayRecordSetz(cursor);
 
@@ -91,10 +91,9 @@ public class Exercises extends ActionBarActivity {
                     reps = cursor.getInt(DBAdapter.COL_EXERCISE_REPS);
                     exerciseNamexercise = cursor.getString(DBAdapter.COL_NAME_EXERCISE);
                     LongRowID = cursor.getLong(DBAdapter.COL_ROWID_EXERCISE);
-                    //ReturnSets();
-                   // ReturnName(exerciseName);
-                    //ReturnReps(reps);
-                    startActivity(new Intent(Exercises.this, EditExercise.class));
+
+                    //startActivity(new Intent(Exercises.this, EditExercise.class));
+                    startActivity(new Intent(Exercises.this, SetsView.class));
                 }
 
             }
@@ -108,6 +107,25 @@ public class Exercises extends ActionBarActivity {
 
 
 
+    }
+    private void registerLongClickCallback() {
+        ListView list = (ListView) findViewById(R.id.listViewExercises);
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                           int pos, long id) {
+
+                // needs the event of long clicking the + by accident
+                Workouts clickedCar = myWorkouts2.get(pos);
+
+                startActivity(new Intent(Exercises.this, EditExercise.class));
+
+
+
+
+                return true;
+            }
+        });
     }
     private class MyListAdapter extends ArrayAdapter<Workouts>{
 
@@ -173,7 +191,7 @@ public class Exercises extends ActionBarActivity {
 
                             +"\n";
                     if(LongRow == IntRowID){
-                    myWorkouts2.add(new Workouts(name,id));
+                    myWorkouts2.add(new Workouts(name,id,0));
                     }
                 } while(cursor.moveToNext());
 

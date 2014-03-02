@@ -48,6 +48,10 @@
             android:name="com.example.liftapp.AddExercise"
             android:label="@string/title_activity_add_exercise" >
         </activity>
+        <activity
+            android:name="com.example.liftapp.SetsView"
+            android:label="@string/title_activity_sets_view" >
+        </activity>
     </application>
 
 </manifest>

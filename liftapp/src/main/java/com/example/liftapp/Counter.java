@@ -13,7 +13,9 @@ import android.widget.Toast;
 public class Counter extends ActionBarActivity {
 
     DBAdapter myDb;
+    public static int intCounterReps;
     Exercises fromExerciseActivity = new Exercises();
+    SetsView fromSetsView = new SetsView();
     private Incrementor mIncrementor = new Incrementor();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +23,10 @@ public class Counter extends ActionBarActivity {
         setContentView(R.layout.fragment_counter);
 
         final TextView txtCounterReps = (TextView) findViewById(R.id.txtCounterReps1);
+
         Button upButton = (Button)findViewById(R.id.btnUp);
         checkHistory();
-
+        openDB();
 
         upButton.setOnClickListener(new View.OnClickListener() {
             //@Override
@@ -50,16 +53,22 @@ public class Counter extends ActionBarActivity {
     private void checkHistory(){
         Button checkHistory = (Button) findViewById(R.id.btnCheck);
         final TextView txtHistory = (TextView) findViewById(R.id.tvHistory);
+
         checkHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                final TextView txtCounterReps = (TextView) findViewById(R.id.txtCounterReps1);
+                String CounterReps = txtCounterReps.getText().toString();
+                intCounterReps = Integer.parseInt(CounterReps);
                 String LongRowID = Long.toString(fromExerciseActivity.IntRowID());
                 int IntRowID = Integer.parseInt(LongRowID);
-                //Cursor cursor = myDb.getAllRows2();
-                //myDb.insertRow3(4,4, IntRowID);
-                //txtHistory.setText(displayRecordSet(cursor));
-                txtHistory.setText("Worked");
+                Cursor cursor = myDb.getAllRows3();
+                //TODO work on storing the  ReturnSetNumber
+
+                myDb.insertRow3(4, intCounterReps, IntRowID, fromSetsView.ReturnSetNumber());
+                txtHistory.setText(displayRecordSet(cursor));
+                //txtHistory.setText("Worked");
 
             }
         });
@@ -70,7 +79,7 @@ public class Counter extends ActionBarActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK ) {
 
-            startActivity(new Intent(Counter.this, EditExercise.class));
+            startActivity(new Intent(Counter.this, SetsView.class));
             //Toast.makeText(Counter.this, "Worked", Toast.LENGTH_LONG).show();
         }
         return super.onKeyDown(keyCode, event);
@@ -87,18 +96,21 @@ public class Counter extends ActionBarActivity {
                 // Process the data:
                 int id = cursor.getInt(DBAdapter.COL_ROWID_HISTORY);
                 //String name = cursor.getString(DBAdapter.COL_NAME_EXERCISE);
-                int studentNumber = cursor.getInt(DBAdapter.COL_HISTORY_SETS);
-                int favColour = cursor.getInt(DBAdapter.COL_HISTORY_REPS);
+                int sets = cursor.getInt(DBAdapter.COL_HISTORY_SETS);
+                int reps = cursor.getInt(DBAdapter.COL_HISTORY_REPS);
                 int RowNumber = cursor.getInt(DBAdapter.COL_HISTORY_EXERCISE_ID);
-                int LongRow = cursor.getInt(DBAdapter.COL_DATETIME);
+                int setNumber = cursor.getInt(DBAdapter.COL_SET_NUMBER);
+                String LongRow = cursor.getString(DBAdapter.COL_DATETIME);
+
                 // Append data to the message:
                 //if(LongRow == IntRowID){
-                    message += "id=" + id
+                    message += "auto id = " + id
                             //+", name =" + name
-                            +", Sets=" + studentNumber
-                            +", Reps=" + favColour
-                            +", Total Rows=" + RowNumber
-                            +", RowID=" + LongRow
+                            +", Sets =" + sets
+                            +", Reps =" + reps
+                            +", Exer ID =" + RowNumber
+                            +", Set# =" + setNumber
+                            +", date = " + LongRow
                             +"\n";
                 //}
             } while(cursor.moveToNext());
@@ -108,6 +120,20 @@ public class Counter extends ActionBarActivity {
 
         }
         return  message;
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        closeDB();
+    }
+
+
+    private void openDB() {
+        myDb = new DBAdapter(this);
+        myDb.open();
+    }
+    private void closeDB() {
+        myDb.close();
     }
 }
 
