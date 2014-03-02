@@ -1,6 +1,7 @@
 package com.example.liftapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,7 @@ public class EditWorkout extends Activity {
         setContentView(R.layout.fragment_edit_workout);
         openDB();
         DeleteCurrentRecord();
-        addWorkout();
+        editWorkout();
         String a = fromMainActivity.getName();
         TextView textView = (TextView) findViewById(R.id.editTxtNewWorkout);
         TextView textView2 = (TextView) findViewById(R.id.textView4);
@@ -48,7 +49,7 @@ public class EditWorkout extends Activity {
                 myDb.deleteRow(LongRow);
                 displayRecordSet( cursor);
 
-                //startActivity(new Intent(EditWorkout.this, MainActivity.class));
+                startActivity(new Intent(EditWorkout.this, MainActivity.class));
                 finish();
 
 
@@ -85,7 +86,7 @@ public class EditWorkout extends Activity {
 
         }
     }
-    private void addWorkout(){
+    private void editWorkout(){
         Button secondActivity = (Button) findViewById(R.id.btnEditWorkout);
 
         secondActivity.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +108,7 @@ public class EditWorkout extends Activity {
                     //Toast.makeText(EditWorkout.this,"Updated "+TxtNewWorkout , //Toast.LENGTH_LONG).show();
 
                     myDb.updateRow(rowID, TxtNewWorkout);
-                    //startActivity(new Intent(EditWorkout.this, MainActivity.class));
+                    startActivity(new Intent(EditWorkout.this, MainActivity.class));
                     finish();
                 }
 

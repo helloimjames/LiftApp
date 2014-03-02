@@ -355,7 +355,23 @@ public class DBAdapter {
     }
 
 
+    public boolean updateRow3(long rowId,int reps) {
+        String where = KEY_ROWID_HISTORY + "=" + rowId;
 
+		/*
+		 * CHANGE 4:
+		 */
+        // Update data in the row with new fields.
+        //  Also change the function's arguments to be what you need!
+        // Create row's data:
+        ContentValues newValues = new ContentValues();
+        //newValues.put(KEY_NAME_WORKOUT, name);
+        //newValues.put(KEY_EXERCISE_SETS, sets);
+        newValues.put(KEY_HISTORY_REPS, reps);
+
+        // Insert it into the database.
+        return db.update(DATABASE_TABLE3, newValues, where, null) != 0;
+    }
     /////////////////////////////////////////////////////////////////////
     //	Private Helper Classes:
     /////////////////////////////////////////////////////////////////////

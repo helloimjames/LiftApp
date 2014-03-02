@@ -21,14 +21,14 @@ public class AddExercise extends Activity {
 
 
         openDB();
-        KillAllRecords();
+        //KillAllRecords();
         nextActivity();
         NumberPicker npSets = (NumberPicker)findViewById(R.id.npSets);
-        npSets.setMinValue(0);
+        npSets.setMinValue(1);
         npSets.setMaxValue(10);
 
         NumberPicker npReps = (NumberPicker)findViewById(R.id.npReps);
-        npReps.setMinValue(0);
+        npReps.setMinValue(1);
         npReps.setMaxValue(10);
 
     }

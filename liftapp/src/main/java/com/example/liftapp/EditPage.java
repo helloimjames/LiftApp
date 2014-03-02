@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,9 +25,9 @@ public class EditPage extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_edit_page);
         openDB();
-        //onDestroy();
-        addWorkout();
-        KillAllRecords();
+
+
+
         //DeleteCurrentRecord();
         String a = fromMainActivity.getName();
         TextView textView = (TextView) findViewById(R.id.editTxtNewWorkout);
@@ -35,36 +36,7 @@ public class EditPage extends ActionBarActivity {
     }
 
 
-    private void addWorkout(){
-        Button secondActivity = (Button) findViewById(R.id.btnAdd);
 
-        secondActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                TextView editTxtNewWorkout = (TextView) findViewById(R.id.editTxtNewWorkout);
-                String TxtNewWorkout = editTxtNewWorkout.getText().toString();
-
-                if(TxtNewWorkout.length() ==0){
-
-                    Toast.makeText(EditPage.this,"Add a name to the Workout" , Toast.LENGTH_LONG).show();
-                    return;
-                }
-                else if(TxtNewWorkout.length() > 0){
-                myDb.insertRow(TxtNewWorkout);
-                Cursor cursor = myDb.getAllRows();
-                displayRecordSet(cursor);
-
-                Toast.makeText(EditPage.this,"Added "+TxtNewWorkout , Toast.LENGTH_LONG).show();
-                //fromMainActivity.populateWorkoutList();
-                startActivity(new Intent(EditPage.this, MainActivity.class));
-                }
-
-            }
-        });
-
-
-    }
 
     /*private void DeleteCurrentRecord(){
         Button DeleteCurrentRecord = (Button) findViewById(R.id.btnDeleteRecord);
@@ -79,23 +51,40 @@ public class EditPage extends ActionBarActivity {
             }
         });
     }*/
-    private void KillAllRecords(){
-        Button KillAllRecords = (Button) findViewById(R.id.btnDestroy);
 
-        KillAllRecords.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent e) {
+        //if (e.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
+        if (e.getKeyCode() == KeyEvent.KEYCODE_ENTER && e.getAction()==0) {
+            Toast.makeText(EditPage.this, "You hit enter", Toast.LENGTH_LONG).show();
+            TextView editTxtNewWorkout = (TextView) findViewById(R.id.editTxtNewWorkout);
+            String TxtNewWorkout = editTxtNewWorkout.getText().toString();
 
-                myDb.deleteAll();
+            if(TxtNewWorkout.length() ==0){
+
+                Toast.makeText(EditPage.this,"Add a name to the Workout" , Toast.LENGTH_LONG).show();
+                //return true;
+            }
+
+            else if(TxtNewWorkout.length() > 0){
+
+                myDb.insertRow(TxtNewWorkout);
                 Cursor cursor = myDb.getAllRows();
                 displayRecordSet(cursor);
 
+                Toast.makeText(EditPage.this,"Added "+TxtNewWorkout , Toast.LENGTH_LONG).show();
 
+                startActivity(new Intent(EditPage.this, MainActivity.class));
+                //finish();
             }
-        });
 
 
+            //return true;
+        }
+        //return super.dispatchKeyEvent(e);
+        return false;
     }
+
     protected void onDestroy() {
         super.onDestroy();
         closeDB();

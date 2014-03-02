@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,7 @@ public class SetsView extends Activity {
     DBAdapter myDb;
     private List<Workouts> myWorkouts2 = new ArrayList<Workouts>();
     public static int SetNumber;
+    public static long SetNumberRowId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,9 +81,7 @@ public class SetsView extends Activity {
 
             TextView exerciseText = (TextView) itemView.findViewById(R.id.tvSetNumber);
             exerciseText.setText(currentCar.getExercise());
-            //wString a =
-            SetNumber = currentCar.getSet();
-            //sets = cursor.getInt(DBAdapter.COL_SET_NUMBER);
+
             TextView exerciseText2 = (TextView) itemView.findViewById(R.id.tvRepsSpecified);
             String b = ""+ currentCar.getID();
             exerciseText2.setText(b);
@@ -112,6 +112,11 @@ public class SetsView extends Activity {
        return SetNumber;
     }
 
+    public static long ReturnSetNumberRowId() {
+
+        return SetNumberRowId;
+    }
+
     private void registerClickCallback() {
 
         ListView list = (ListView) findViewById(R.id.lvSetsList);
@@ -119,9 +124,16 @@ public class SetsView extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View viewClicked,int position, long id) {
                 Workouts clickedCar = myWorkouts2.get(position);
-                Cursor cursor = myDb.getRow2(clickedCar.getID());
+                //Cursor cursor = myDb.getRow2(clickedCar.getID());
+                SetNumber = clickedCar.getSet();
+                SetNumber= position+1;
+                String LongRowID = Long.toString(fromExerciseActivity.IntRowID());
+                int IntRowID = Integer.parseInt(LongRowID);
+                SetNumberRowId = myDb.insertRow3(0, 0, IntRowID, SetNumber);
 
-                    startActivity(new Intent(SetsView.this, Counter.class));
+                //String a = ""+ SetNumberRowId;
+                //Toast.makeText(SetsView.this, a, Toast.LENGTH_LONG).show();
+                startActivity(new Intent(SetsView.this, Counter.class));
                 }
 
 

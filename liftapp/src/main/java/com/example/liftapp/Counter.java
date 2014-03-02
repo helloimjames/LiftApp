@@ -66,7 +66,7 @@ public class Counter extends ActionBarActivity {
                 Cursor cursor = myDb.getAllRows3();
                 //TODO work on storing the  ReturnSetNumber
 
-                myDb.insertRow3(4, intCounterReps, IntRowID, fromSetsView.ReturnSetNumber());
+                myDb.updateRow3(fromSetsView.ReturnSetNumberRowId(), intCounterReps);
                 txtHistory.setText(displayRecordSet(cursor));
                 //txtHistory.setText("Worked");
 

@@ -38,7 +38,7 @@ public class Exercises extends ActionBarActivity {
         populateWorkoutList();
         populateListView();
         registerClickCallback();
-        nextActivity();
+
         //registerLongClickCallback();
 
     }
@@ -156,18 +156,7 @@ public class Exercises extends ActionBarActivity {
 
     }
 
-    private void nextActivity(){
-        Button btnCounterStart = (Button) findViewById(R.id.btnTest);
 
-        btnCounterStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Exercises.this, Counter.class));
-            }
-        });
-
-
-    }
 
     private void displayRecordSetz(Cursor cursor) {
         String message = "";
