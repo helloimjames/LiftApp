@@ -71,7 +71,7 @@ public class Counter extends ActionBarActivity {
                 String LongRow = cursor.getString(DBAdapter.COL_DATETIME);
 
                 // Append data to the message:
-                //if(LongRow == IntRowID){
+                //if(LongRow == longRowIDExercise){
                     message += "auto id = " + id
                             //+", name =" + name
                             +", Sets =" + sets

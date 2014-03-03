@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -27,6 +25,7 @@ public class SetsView extends Activity {
     public static int SetNumber;
     public static long returnedHistoryIDORNOT;
     public static long SetNumberRowId;
+    public static int counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,11 +46,14 @@ public class SetsView extends Activity {
         ArrayAdapter<Workouts> adapter = new MyListAdapter();
         int numberOfSets = fromExerciseActivity.ReturnSets();
         int numberOfReps= fromExerciseActivity.ReturnReps();
-        int counter = 1;
+        counter = 1;
         numberOfSets += 1;
+        Cursor cursor = myDb.getAllRows3();
         while(counter != numberOfSets){
             String numberOfSets2 = ""+counter;
-            myWorkouts2.add(new Workouts(numberOfSets2,numberOfReps,SetNumber));
+
+
+            myWorkouts2.add(new Workouts(numberOfSets2,numberOfReps,SetNumber, findRepsForSets(cursor)));
 
             counter++;
         }
@@ -62,6 +64,30 @@ public class SetsView extends Activity {
 
 
 
+    }
+    private int findRepsForSets(Cursor cursor) {
+
+
+        int repsHistory = 0;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        String currentDate = dateFormat.format(date);
+
+        if (cursor.moveToFirst()) {
+            do {
+                // Process the data:
+                String date2 = cursor.getString(DBAdapter.COL_DATETIME);
+                long historyLongID = cursor.getInt(DBAdapter.COL_ROWID_HISTORY);
+                int setNumberFromHistory = cursor.getInt(DBAdapter.COL_SET_NUMBER);
+                repsHistory = cursor.getInt(DBAdapter.COL_HISTORY_REPS);
+                if(currentDate.equals(date2) && counter == setNumberFromHistory){
+                    //Toast.makeText(SetsView.this,String.valueOf(counter) , Toast.LENGTH_LONG).show();
+                    return repsHistory;
+
+                }
+            } while(cursor.moveToNext());
+        }
+        return 0;
     }
     private class MyListAdapter extends ArrayAdapter<Workouts>{
 
@@ -85,6 +111,8 @@ public class SetsView extends Activity {
             TextView exerciseText2 = (TextView) itemView.findViewById(R.id.tvRepsSpecified);
             String b = ""+ currentCar.getID();
             exerciseText2.setText(b);
+            TextView exerciseText3 = (TextView) itemView.findViewById(R.id.tvRepsDone);
+            exerciseText3.setText(String.valueOf(currentCar.getRep()));
             return itemView;
         }
 
@@ -135,7 +163,7 @@ public class SetsView extends Activity {
                 }
 
                 else{
-                    String LongRowID = Long.toString(fromExerciseActivity.IntRowID());
+                    String LongRowID = Long.toString(fromExerciseActivity.longRowIDExercise());
                     int IntRowID = Integer.parseInt(LongRowID);
                     SetNumberRowId = myDb.insertRow3(0, 0, IntRowID, SetNumber);
                     startActivity(new Intent(SetsView.this, Counter.class));
@@ -177,7 +205,7 @@ public class SetsView extends Activity {
                 int setNumberFromHistory = cursor.getInt(DBAdapter.COL_SET_NUMBER);
                 long historyLongID = cursor.getInt(DBAdapter.COL_ROWID_HISTORY);
                 // if SAME DATE                   Same SET #                                SAME EXERCISE ID
-                if(currentDate.equals(date2) && (setNumberFromHistory == SetNumber) && (id == fromExerciseActivity.IntRowID()) ){
+                if(currentDate.equals(date2) && (setNumberFromHistory == SetNumber) && (id == fromExerciseActivity.longRowIDExercise()) ){
 
                     returnedHistoryIDORNOT = historyLongID;
                     break outerloop;
@@ -186,7 +214,7 @@ public class SetsView extends Activity {
             } while(cursor.moveToNext());
 
         }
-        Toast.makeText(SetsView.this,"search done got row ID of "+ String.valueOf(returnedHistoryIDORNOT) , Toast.LENGTH_LONG).show();
+        //Toast.makeText(SetsView.this,"search done got row ID of "+ String.valueOf(returnedHistoryIDORNOT) , Toast.LENGTH_LONG).show();
         return returnedHistoryIDORNOT;
     }
 

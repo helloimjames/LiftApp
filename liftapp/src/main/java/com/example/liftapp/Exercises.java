@@ -44,7 +44,7 @@ public class Exercises extends ActionBarActivity {
     }
 
     public void populateWorkoutList() {
-        myWorkouts2.add(new Workouts("+",0,0));
+        myWorkouts2.add(new Workouts("+",0,0,0));
         Cursor cursor = myDb.getAllRows2();
         displayRecordSetz(cursor);
 
@@ -60,7 +60,7 @@ public class Exercises extends ActionBarActivity {
     public static String ReturnName(){
         return exerciseNamexercise;
     }
-    public static long IntRowID(){
+    public static long longRowIDExercise(){
         return LongRowID;
     }
 
@@ -72,15 +72,8 @@ public class Exercises extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View viewClicked,int position, long id) {
                 Workouts clickedCar = myWorkouts2.get(position);
                 Cursor cursor = myDb.getRow2(clickedCar.getID());
-                //Long rowIDLong = cursor.getLong(DBAdapter.COL_ROWID_WORKOUT);
-                //String
-                //String LongRowID = Long.toString(rowIDLong);
-                //int IntRowID = Integer.parseInt(LongRowID);
-                //String name = cursor.getString(DBAdapter.COL_NAME_EXERCISE);
 
 
-                //int sets = cursor.getInt(IntRowID);
-                //int
                 if(clickedCar.getExercise() == "+"){
 
                     startActivity(new Intent(Exercises.this, AddExercise.class));
@@ -92,7 +85,7 @@ public class Exercises extends ActionBarActivity {
                     exerciseNamexercise = cursor.getString(DBAdapter.COL_NAME_EXERCISE);
                     LongRowID = cursor.getLong(DBAdapter.COL_ROWID_EXERCISE);
 
-                    //startActivity(new Intent(Exercises.this, EditExercise.class));
+
                     startActivity(new Intent(Exercises.this, SetsView.class));
                 }
 
@@ -180,7 +173,7 @@ public class Exercises extends ActionBarActivity {
 
                             +"\n";
                     if(LongRow == IntRowID){
-                    myWorkouts2.add(new Workouts(name,id,0));
+                    myWorkouts2.add(new Workouts(name,id,0,0));
                     }
                 } while(cursor.moveToNext());
 

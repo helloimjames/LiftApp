@@ -49,9 +49,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7f697a8f-6589-417c-9771-790a45f5459c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditExercise.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditExercise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_counter.xml" afterPath="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_counter.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Workouts.java" afterPath="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Workouts.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml" afterPath="$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Lift App.iws" />
@@ -115,17 +118,7 @@
     <favorites_list name="Lift App" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Counter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="63" selection-start="2911" selection-end="2911" vertical-scroll-proportion="0.037900876" vertical-offset="814" max-vertical-offset="1500">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -817,20 +810,20 @@
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditExercise.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/activity_sets_view.xml" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_add_exercise.xml" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Workouts.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/activity_exercises.xml" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_page.xml" />
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/DBAdapter.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditWorkout.java" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml" />
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Incrementor.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/EditPage.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/AddExercise.java" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java" />
-        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java" />
         <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_counter.xml" />
         <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Workouts.java" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java" />
+        <option value="$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml" />
       </list>
     </option>
   </component>
@@ -897,7 +890,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -1075,6 +1067,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1084,7 +1077,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="options.lastSelected" value="gradle.compiler" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -1100,7 +1093,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistory" value="&#10;pu" />
+    <property name="SearchEverywhereHistory" value="wor&#10;main&#10;work&#10;exer&#10;sets&#10;pu" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1346,8 +1339,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1600" height="874" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1600" height="874" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1360,24 +1353,54 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29155672" sideWeight="0.4997284" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.058047492" sideWeight="0.51540434" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2889182" sideWeight="0.4997284" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4287599" sideWeight="0.5147625" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.80442375" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14826702" sideWeight="0.5" order="0" side_tool="true" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.058047492" sideWeight="0.48459563" order="2" side_tool="true" content_ui="tabs" x="-1796" y="195" width="1488" height="248" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3491656" sideWeight="0.5" order="0" side_tool="true" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4287599" sideWeight="0.48523748" order="2" side_tool="true" content_ui="tabs" x="-1796" y="195" width="1488" height="248" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34492123" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34467265" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30508474" sideWeight="0.5005325" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.80442375" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14826702" sideWeight="0.5" order="0" side_tool="true" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.058047492" sideWeight="0.48459563" order="2" side_tool="true" content_ui="tabs" x="-1796" y="195" width="1488" height="248" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41952983" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34492123" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39814815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29023746" sideWeight="0.4997284" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4287599" sideWeight="0.51540434" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1694,16 +1717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="22" column="20" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="1215">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/fragment_edit_page.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1721,13 +1734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Workouts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="58" selection-start="242" selection-end="251" vertical-scroll-proportion="0.25245443" vertical-offset="0" max-vertical-offset="713">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Incrementor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="4" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
@@ -1738,27 +1744,6 @@
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/AddExercise.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="15" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1920">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="10" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.24390244" vertical-offset="210" max-vertical-offset="2955">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="75" selection-start="3008" selection-end="3026" vertical-scroll-proportion="0.717682" vertical-offset="657" max-vertical-offset="2940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="0" selection-start="5745" selection-end="5745" vertical-scroll-proportion="0.73105496" vertical-offset="1908" max-vertical-offset="2625">
           <folding />
         </state>
       </provider>
@@ -1792,7 +1777,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Counter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="63" selection-start="2911" selection-end="2911" vertical-scroll-proportion="0.037900876" vertical-offset="814" max-vertical-offset="1500">
+        <state line="70" column="63" selection-start="2911" selection-end="2911" vertical-scroll-proportion="1.2900875" vertical-offset="0" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="29" selection-start="2404" selection-end="2404" vertical-scroll-proportion="0.96575344" vertical-offset="210" max-vertical-offset="2955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Workouts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="4" selection-start="592" selection-end="592" vertical-scroll-proportion="0.6164383" vertical-offset="0" max-vertical-offset="730">
+          <folding>
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/res/layout/sets_view.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="66" column="4" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.0" vertical-offset="512" max-vertical-offset="1215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/SetsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="22" selection-start="2687" selection-end="2687" vertical-scroll-proportion="-3.6042216" vertical-offset="2611" max-vertical-offset="3315">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liftapp/src/main/java/com/example/liftapp/Exercises.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="32" selection-start="1676" selection-end="1676" vertical-scroll-proportion="0.91604936" vertical-offset="349" max-vertical-offset="2835">
           <folding />
         </state>
       </provider>

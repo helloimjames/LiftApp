@@ -6,15 +6,15 @@ package com.example.liftapp;
 public class Workouts {
     private String exercise;
     private int set;
-    //private int rep;
+    private int rep;
     private long id;
     
 
-    public Workouts(String exercise, int id, int setNumber) {
+    public Workouts(String exercise, int id, int setNumber, int repsDone) {
         super();
         this.exercise = exercise;
         this.set = setNumber;
-        //this.rep = rep;
+        this.rep = repsDone;
         this.id = id;
         
     }
@@ -29,10 +29,10 @@ public class Workouts {
     public int getSet() {
         return set;
     }
-    /*public int getRep() {
+    public int getRep() {
         return rep;
     }
-    */
+
     public long getID() {
         return id;
     }

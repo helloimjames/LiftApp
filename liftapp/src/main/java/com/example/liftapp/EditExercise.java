@@ -1,22 +1,13 @@
 package com.example.liftapp;
 
 import android.app.Activity;
-import android.app.ActionBar;
-import android.app.Fragment;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class EditExercise extends Activity {
 
@@ -73,9 +64,9 @@ public class EditExercise extends Activity {
 
 
 
-                String LongRowID = Long.toString(fromExerciseActivity.IntRowID());
+                String LongRowID = Long.toString(fromExerciseActivity.longRowIDExercise());
                 int IntRowID = Integer.parseInt(LongRowID);
-                //myDb.insertRow3(fromExerciseActivity.ReturnName(),0,0,IntRowID);
+                //myDb.insertRow3(fromExerciseActivity.ReturnName(),0,0,longRowIDExercise);
                 startActivity(new Intent(EditExercise.this, Counter.class));
 
             }
