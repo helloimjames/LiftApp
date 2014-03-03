@@ -76,11 +76,12 @@ public class SetsView extends Activity {
         if (cursor.moveToFirst()) {
             do {
                 // Process the data:
+                int id = cursor.getInt(DBAdapter.COL_HISTORY_EXERCISE_ID);
                 String date2 = cursor.getString(DBAdapter.COL_DATETIME);
                 long historyLongID = cursor.getInt(DBAdapter.COL_ROWID_HISTORY);
                 int setNumberFromHistory = cursor.getInt(DBAdapter.COL_SET_NUMBER);
                 repsHistory = cursor.getInt(DBAdapter.COL_HISTORY_REPS);
-                if(currentDate.equals(date2) && counter == setNumberFromHistory){
+                if(currentDate.equals(date2) && counter == setNumberFromHistory && (id == fromExerciseActivity.longRowIDExercise())){
                     //Toast.makeText(SetsView.this,String.valueOf(counter) , Toast.LENGTH_LONG).show();
                     return repsHistory;
 
