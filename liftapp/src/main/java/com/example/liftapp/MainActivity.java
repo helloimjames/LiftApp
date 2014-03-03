@@ -37,8 +37,8 @@ public class MainActivity extends ActionBarActivity {
         populateListView();
         registerClickCallback();
         registerLongClickCallback();
-        ToneGenerator toneG = new ToneGenerator(AudioManager.STREAM_ALARM, 50);
-        toneG.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 200);
+       // ToneGenerator toneG = new ToneGenerator(AudioManager.STREAM_ALARM, 50);
+        //toneG.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 200);
     }
     private void openDB() {
         myDb = new DBAdapter(this);

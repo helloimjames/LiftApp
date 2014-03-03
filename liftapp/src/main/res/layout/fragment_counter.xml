@@ -15,9 +15,10 @@
         android:text="0"
         android:id="@+id/txtCounterReps1"
         android:layout_gravity="center"
-        android:textSize="70dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:textSize="50dp"
+        android:layout_alignTop="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_marginLeft="65dp" />
 
     <Button
         android:layout_width="match_parent"

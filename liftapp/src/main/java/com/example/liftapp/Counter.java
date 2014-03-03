@@ -19,11 +19,6 @@ public class Counter extends ActionBarActivity {
     public static int intCounterReps;
     Exercises fromExerciseActivity = new Exercises();
     SetsView fromSetsView = new SetsView();
-    int newNumberValue;
-    private Incrementor mIncrementor = new Incrementor();
-    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    Date date = new Date();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,51 +26,31 @@ public class Counter extends ActionBarActivity {
         setContentView(R.layout.fragment_counter);
 
         final TextView txtCounterReps = (TextView) findViewById(R.id.txtCounterReps1);
-
-        Button upButton = (Button)findViewById(R.id.btnUp);
-
         openDB();
-
+        int newNumberValue = myDb.getRow3(fromSetsView.ReturnSetNumberRowId()).getInt(DBAdapter.COL_HISTORY_REPS);
+        txtCounterReps.setText(String.valueOf(newNumberValue));
+        Button upButton = (Button)findViewById(R.id.btnUp);
         upButton.setOnClickListener(new View.OnClickListener() {
             //@Override
             public void onClick(View view) {
+
+                int newNumberValue = myDb.getRow3(fromSetsView.ReturnSetNumberRowId()).getInt(DBAdapter.COL_HISTORY_REPS);
                 newNumberValue += 1 ;
-
-                //myDb.getRow3()
-                //if(newNumberValue = ){
-
-               // }
-               // else(){
-
-                //}
-                final TextView txtHistory = (TextView) findViewById(R.id.tvHistory);
                 txtCounterReps.setText(String.valueOf(newNumberValue));
-                //final TextView txtCounterReps = (TextView) findViewById(R.id.txtCounterReps1);
-                String CounterReps = txtCounterReps.getText().toString();
-                intCounterReps = Integer.parseInt(CounterReps);
-                //String LongRowID = Long.toString(fromExerciseActivity.IntRowID());
-                //int IntRowID = Integer.parseInt(LongRowID);
+                intCounterReps = Integer.parseInt(txtCounterReps.getText().toString());
                 Cursor cursor = myDb.getAllRows3();
-
-
-                myDb.updateRow3(fromSetsView.ReturnSetNumberRowId(), intCounterReps++);
+                final TextView txtHistory = (TextView) findViewById(R.id.tvHistory);
+                myDb.updateRow3(fromSetsView.ReturnSetNumberRowId(), intCounterReps);
                 txtHistory.setText(displayRecordSet(cursor));
-
-
             }
         });
-
-
     }
-
-
-
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK ) {
 
 
-            myDb.updateRow3(fromSetsView.ReturnSetNumberRowId(), intCounterReps);
+            //myDb.updateRow3(fromSetsView.ReturnSetNumberRowId(), intCounterReps);
             startActivity(new Intent(Counter.this, SetsView.class));
             //finish();
         }
@@ -84,10 +59,6 @@ public class Counter extends ActionBarActivity {
 
     private String displayRecordSet(Cursor cursor) {
         String message = "";
-        // populate the message from the cursor
-        //String LongRowID = Long.toString(fromMainActivity.rowIDLong());
-        //int IntRowID = Integer.parseInt(LongRowID);
-        // Reset cursor to start, checking to see if there's data:
         if (cursor.moveToFirst()) {
             do {
                 // Process the data:
@@ -111,8 +82,7 @@ public class Counter extends ActionBarActivity {
                             +"\n";
                 //}
             } while(cursor.moveToNext());
-            //TextView editTxtNewWorkout = (TextView) findViewById(R.id.textView4);
-            //editTxtNewWorkout.setText(message);
+
 
 
         }

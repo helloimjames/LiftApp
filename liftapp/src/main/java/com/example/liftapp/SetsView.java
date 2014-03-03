@@ -79,19 +79,12 @@ public class SetsView extends Activity {
                 itemView = getLayoutInflater().inflate(R.layout.sets_view, parent, false);
             }
 
-            // Find the car to work with.
             Workouts currentCar = myWorkouts2.get(position);
-
-
             TextView exerciseText = (TextView) itemView.findViewById(R.id.tvSetNumber);
             exerciseText.setText(currentCar.getExercise());
-
             TextView exerciseText2 = (TextView) itemView.findViewById(R.id.tvRepsSpecified);
             String b = ""+ currentCar.getID();
             exerciseText2.setText(b);
-
-
-
             return itemView;
         }
 
@@ -132,13 +125,12 @@ public class SetsView extends Activity {
 
                 SetNumber = clickedCar.getSet();
                 SetNumber= position+1;
-                //Toast.makeText(SetsView.this, "before if plain set position"+String.valueOf(SetNumber), Toast.LENGTH_LONG).show();
+
                 Cursor cursor = myDb.getAllRows3();
 
                 if (checkForExistingHistory(cursor) > 0){
 
                     SetNumberRowId = returnedHistoryIDORNOT;
-                    Toast.makeText(SetsView.this, "in if set#rowid "+String.valueOf(SetNumberRowId), Toast.LENGTH_LONG).show();
                     startActivity(new Intent(SetsView.this, Counter.class));
                 }
 
@@ -146,9 +138,6 @@ public class SetsView extends Activity {
                     String LongRowID = Long.toString(fromExerciseActivity.IntRowID());
                     int IntRowID = Integer.parseInt(LongRowID);
                     SetNumberRowId = myDb.insertRow3(0, 0, IntRowID, SetNumber);
-                    Toast.makeText(SetsView.this, "in else set#rowid"+String.valueOf(SetNumberRowId), Toast.LENGTH_LONG).show();
-                    //String a = ""+ SetNumberRowId;
-                    //Toast.makeText(SetsView.this, a, Toast.LENGTH_LONG).show();
                     startActivity(new Intent(SetsView.this, Counter.class));
                 }
 
@@ -172,38 +161,32 @@ public class SetsView extends Activity {
 
     private long checkForExistingHistory(Cursor cursor) {
 
-        String message = "";
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
         String currentDate = dateFormat.format(date);
-        //long returnedHistoryIDORNOT;
+        returnedHistoryIDORNOT = 0;
+        outerloop:
+
         if (cursor.moveToFirst()) {
 
             do {
                 // Process the data:
-
                 int id = cursor.getInt(DBAdapter.COL_HISTORY_EXERCISE_ID);
                 String date2 = cursor.getString(DBAdapter.COL_DATETIME);
                 int setNumberFromHistory = cursor.getInt(DBAdapter.COL_SET_NUMBER);
                 long historyLongID = cursor.getInt(DBAdapter.COL_ROWID_HISTORY);
+                // if SAME DATE                   Same SET #                                SAME EXERCISE ID
+                if(currentDate.equals(date2) && (setNumberFromHistory == SetNumber) && (id == fromExerciseActivity.IntRowID()) ){
 
-                message += " date =" + date
-
-                        +"\n";
-                if(currentDate.equals(date2) && (id == SetNumber) && (setNumberFromHistory == fromExerciseActivity.IntRowID()) ){
-
-                    Toast.makeText(SetsView.this,"all match will grab id of "+ String.valueOf(returnedHistoryIDORNOT) , Toast.LENGTH_LONG).show();
                     returnedHistoryIDORNOT = historyLongID;
-                    break;
-                    //TODO its when you go back it fucks up and double check the if
+                    break outerloop;
 
                 }
-
-
             } while(cursor.moveToNext());
 
         }
-
+        Toast.makeText(SetsView.this,"search done got row ID of "+ String.valueOf(returnedHistoryIDORNOT) , Toast.LENGTH_LONG).show();
         return returnedHistoryIDORNOT;
     }
 
