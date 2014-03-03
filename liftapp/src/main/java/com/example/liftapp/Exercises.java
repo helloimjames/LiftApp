@@ -204,7 +204,7 @@ public class Exercises extends ActionBarActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK ) {
             startActivity(new Intent(Exercises.this, MainActivity.class));
-            Toast.makeText(Exercises.this, "Worked", Toast.LENGTH_LONG).show();
+            //Toast.makeText(Exercises.this, "Worked", Toast.LENGTH_LONG).show();
         }
         return super.onKeyDown(keyCode, event);
     }

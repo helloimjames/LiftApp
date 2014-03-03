@@ -19,6 +19,7 @@ public class Counter extends ActionBarActivity {
     public static int intCounterReps;
     Exercises fromExerciseActivity = new Exercises();
     SetsView fromSetsView = new SetsView();
+    int newNumberValue;
     private Incrementor mIncrementor = new Incrementor();
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     Date date = new Date();
@@ -38,7 +39,7 @@ public class Counter extends ActionBarActivity {
         upButton.setOnClickListener(new View.OnClickListener() {
             //@Override
             public void onClick(View view) {
-                int newNumberValue = mIncrementor.AddOne();
+                newNumberValue += 1 ;
 
                 //myDb.getRow3()
                 //if(newNumberValue = ){
@@ -49,15 +50,15 @@ public class Counter extends ActionBarActivity {
                 //}
                 final TextView txtHistory = (TextView) findViewById(R.id.tvHistory);
                 txtCounterReps.setText(String.valueOf(newNumberValue));
-                final TextView txtCounterReps = (TextView) findViewById(R.id.txtCounterReps1);
+                //final TextView txtCounterReps = (TextView) findViewById(R.id.txtCounterReps1);
                 String CounterReps = txtCounterReps.getText().toString();
                 intCounterReps = Integer.parseInt(CounterReps);
-                String LongRowID = Long.toString(fromExerciseActivity.IntRowID());
-                int IntRowID = Integer.parseInt(LongRowID);
+                //String LongRowID = Long.toString(fromExerciseActivity.IntRowID());
+                //int IntRowID = Integer.parseInt(LongRowID);
                 Cursor cursor = myDb.getAllRows3();
 
 
-                myDb.updateRow3(fromSetsView.ReturnSetNumberRowId(), intCounterReps);
+                myDb.updateRow3(fromSetsView.ReturnSetNumberRowId(), intCounterReps++);
                 txtHistory.setText(displayRecordSet(cursor));
 
 
@@ -75,8 +76,8 @@ public class Counter extends ActionBarActivity {
 
 
             myDb.updateRow3(fromSetsView.ReturnSetNumberRowId(), intCounterReps);
-            //startActivity(new Intent(Counter.this, SetsView.class));
-            finish();
+            startActivity(new Intent(Counter.this, SetsView.class));
+            //finish();
         }
         return super.onKeyDown(keyCode, event);
     }

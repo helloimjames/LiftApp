@@ -16,8 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class EditPage extends ActionBarActivity {
-    //private List<Workouts> myWorkouts = new ArrayList<Workouts>();
-    //public static String name;
+
     MainActivity fromMainActivity = new MainActivity();
     DBAdapter myDb;
     @Override
@@ -34,23 +33,6 @@ public class EditPage extends ActionBarActivity {
         textView.setText(a);
 
     }
-
-
-
-
-    /*private void DeleteCurrentRecord(){
-        Button DeleteCurrentRecord = (Button) findViewById(R.id.btnDeleteRecord);
-        DeleteCurrentRecord.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            String a = fromMainActivity.getName();
-            Toast.makeText(EditPage.this,"Deleted " + a, Toast.LENGTH_LONG).show();
-            myDb.deleteRow(fromMainActivity.rowIDLong());
-            startActivity(new Intent(EditPage.this, MainActivity.class));
-
-            }
-        });
-    }*/
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent e) {

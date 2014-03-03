@@ -25,7 +25,7 @@ public class SetsView extends Activity {
     DBAdapter myDb;
     private List<Workouts> myWorkouts2 = new ArrayList<Workouts>();
     public static int SetNumber;
-    public static long returnedHistoryIDORNOT = 0;
+    public static long returnedHistoryIDORNOT;
     public static long SetNumberRowId;
 
     @Override
@@ -132,23 +132,26 @@ public class SetsView extends Activity {
 
                 SetNumber = clickedCar.getSet();
                 SetNumber= position+1;
+                //Toast.makeText(SetsView.this, "before if plain set position"+String.valueOf(SetNumber), Toast.LENGTH_LONG).show();
                 Cursor cursor = myDb.getAllRows3();
 
                 if (checkForExistingHistory(cursor) > 0){
-                    startActivity(new Intent(SetsView.this, Counter.class));
+
                     SetNumberRowId = returnedHistoryIDORNOT;
-                    Toast.makeText(SetsView.this, "in if "+String.valueOf(SetNumberRowId), Toast.LENGTH_LONG).show();
+                    Toast.makeText(SetsView.this, "in if set#rowid "+String.valueOf(SetNumberRowId), Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(SetsView.this, Counter.class));
                 }
 
                 else{
                     String LongRowID = Long.toString(fromExerciseActivity.IntRowID());
                     int IntRowID = Integer.parseInt(LongRowID);
                     SetNumberRowId = myDb.insertRow3(0, 0, IntRowID, SetNumber);
-                    Toast.makeText(SetsView.this, "in else "+String.valueOf(SetNumberRowId), Toast.LENGTH_LONG).show();
+                    Toast.makeText(SetsView.this, "in else set#rowid"+String.valueOf(SetNumberRowId), Toast.LENGTH_LONG).show();
                     //String a = ""+ SetNumberRowId;
                     //Toast.makeText(SetsView.this, a, Toast.LENGTH_LONG).show();
                     startActivity(new Intent(SetsView.this, Counter.class));
                 }
+
             }
 
 
@@ -187,12 +190,12 @@ public class SetsView extends Activity {
                 message += " date =" + date
 
                         +"\n";
-                if(currentDate.equals(date2) && id == SetNumber && setNumberFromHistory == fromExerciseActivity.IntRowID() ){
+                if(currentDate.equals(date2) && (id == SetNumber) && (setNumberFromHistory == fromExerciseActivity.IntRowID()) ){
 
                     Toast.makeText(SetsView.this,"all match will grab id of "+ String.valueOf(returnedHistoryIDORNOT) , Toast.LENGTH_LONG).show();
                     returnedHistoryIDORNOT = historyLongID;
                     break;
-                    //TODO its when you go back it fucks up
+                    //TODO its when you go back it fucks up and double check the if
 
                 }
 

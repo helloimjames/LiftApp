@@ -50,7 +50,7 @@ public class AddExercise extends Activity {
                 myDb.insertRow2(TxtNewWorkout,npSets.getValue(),npReps.getValue(),IntRowID );
                 //TextView displayRecord = (TextView) findViewById(R.id.textView5);
                 String message = TxtNewWorkout +" "+npSets +" "+ npReps +" ";
-                Toast.makeText(AddExercise.this,message, Toast.LENGTH_LONG).show();
+
                 Cursor cursor = myDb.getAllRows2();
                 displayRecordSet(cursor);
                 //displayRecord.setText(message);
@@ -128,7 +128,7 @@ public class AddExercise extends Activity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK ) {
             startActivity(new Intent(AddExercise.this, Exercises.class));
-            Toast.makeText(AddExercise.this, "Worked", Toast.LENGTH_LONG).show();
+            //Toast.makeText(AddExercise.this, "Worked", Toast.LENGTH_LONG).show();
         }
         return super.onKeyDown(keyCode, event);
     }
