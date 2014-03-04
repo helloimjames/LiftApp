@@ -11,5 +11,7 @@
     <string name="title_activity_edit_exercise">EditExercise</string>
     <string name="title_activity_add_exercise">AddExercise</string>
     <string name="title_activity_sets_view">SetsView</string>
+    <string name="title_activity_history">History</string>
+    <string name="title_activity_archieve_history">ArchieveHistory</string>
 
 </resources>

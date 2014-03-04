@@ -52,6 +52,14 @@
             android:name="com.example.liftapp.SetsView"
             android:label="@string/title_activity_sets_view" >
         </activity>
+        <activity
+            android:name="com.example.liftapp.History"
+            android:label="@string/title_activity_history" >
+        </activity>
+        <activity
+            android:name="com.example.liftapp.ArchieveHistory"
+            android:label="@string/title_activity_archieve_history" >
+        </activity>
     </application>
 
 </manifest>

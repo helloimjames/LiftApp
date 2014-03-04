@@ -166,7 +166,7 @@ public class MainActivity extends ActionBarActivity {
             // Fill the view
 
 
-            // Make:
+
             TextView exerciseText = (TextView) itemView.findViewById(R.id.item_txtExercise);
             exerciseText.setText(currentCar.getExercise());
 

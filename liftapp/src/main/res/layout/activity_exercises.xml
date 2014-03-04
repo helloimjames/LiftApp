@@ -23,4 +23,12 @@
         android:background="#f8f4ff"
         android:textAlignment="center" />
 
+    <Button
+        android:layout_width="353dp"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:id="@+id/btnHistory"
+        android:layout_gravity="center_horizontal|bottom" />
+
+
 </FrameLayout>

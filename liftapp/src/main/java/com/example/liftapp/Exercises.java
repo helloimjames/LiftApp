@@ -38,11 +38,27 @@ public class Exercises extends ActionBarActivity {
         populateWorkoutList();
         populateListView();
         registerClickCallback();
-
+        ButtonHistory();
         //registerLongClickCallback();
 
     }
 
+    private void ButtonHistory(){
+        Button secondActivity = (Button) findViewById(R.id.btnHistory);
+
+        secondActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(Exercises.this, History.class));
+
+
+
+            }
+        });
+
+
+    }
     public void populateWorkoutList() {
         myWorkouts2.add(new Workouts("+",0,0,0));
         Cursor cursor = myDb.getAllRows2();
@@ -101,6 +117,8 @@ public class Exercises extends ActionBarActivity {
 
 
     }
+
+
     private void registerLongClickCallback() {
         ListView list = (ListView) findViewById(R.id.listViewExercises);
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
